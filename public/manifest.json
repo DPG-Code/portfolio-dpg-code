@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio Daniel Prieto",
+  "short_name": "DPG-Code",
+  "start_url": "/pages/index.astro",
+  "theme_color": "#0D0D0D",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "icons": [
+    {
+      "src": "/assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

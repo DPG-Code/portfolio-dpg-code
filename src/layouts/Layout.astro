@@ -1,0 +1,153 @@
+---
+import Header from '../components/Header.astro'
+import { ViewTransitions } from 'astro:transitions'
+
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='author' content='Daniel Prieto Gaviria' />
+    <meta name='generator' content={Astro.generator} />
+    <meta
+      http-equiv='Content-Security-Policy'
+      content="img-src 'self' cloudinary.com res.cloudinary.com"
+    />
+    <meta name='theme-color' content='#0D0D0D' />
+    <link rel='icon' type='image/png' href='/assets/icon-192x192.png' />
+    <link rel='manifest' href='/manifest.json' />
+    <title>{title}</title>
+    <ViewTransitions />
+    <meta
+      name='description'
+      content='Daniel Prieto Gaviria, Front-end Developer | JavaScript, TypeScript, React.js, Next.js, Astro, Svelte, Node.js, MongoDB, SQL, GraphQl, Figma, Illustrator and Corel'
+    />
+    <meta
+      name='keywords'
+      content='daniel prieto gaviria, dpg code, frontend developer, full stack developer, javaScript, typeScript, react.js,next.js, astro, svelte, node.js, mongodb, sql, graphql, figma, illustrator, corel'
+    />
+  </head>
+  <body class='bg-[#0D0D0D] relative'>
+    <div id='cursorMouse' class='max-[600px]:hidden'></div>
+    <Header />
+    <slot />
+    <style is:global>
+      @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+        font-weight: 300 400 500 600 700 800;
+        font-display: swap;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'InterItalic';
+        src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+      }
+
+      .Inter-Italic {
+        font-family: 'InterItalic', sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f3d335;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        transition: all 0.5s ease;
+      }
+      header {
+        transition: all 0.5s ease;
+      }
+
+      #cursorMouse {
+        width: 320px;
+        height: 320px;
+        background: linear-gradient(
+          158.63deg,
+          #f3d335 -5.25%,
+          #f3d3358a 28.3%,
+          #f3d33517 108.22%
+        );
+        opacity: 10%;
+        filter: blur(35px);
+        border-radius: 100%;
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+      }
+
+      /* Animations */
+      .transition-fade {
+        transition: all 0.2s ease-in-out;
+      }
+      .icon-animation:hover > svg {
+        transition: all 0.2s ease-in-out;
+        transform: translateX(4px);
+      }
+      .icon-animation svg {
+        transition: all 0.2s ease-in-out;
+      }
+
+      .navbar a {
+        transition: all 0.2s ease-in-out;
+      }
+      .navbar .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+      .navbar a:hover ~ .dot {
+        transform: translateY(-18px);
+        opacity: 1;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        .navbar a:hover ~ .dot {
+          transform: translateY(-30px);
+          opacity: 1;
+        }
+      }
+      @media only screen and (min-width: 1536px) {
+        .navbar a:hover ~ .dot {
+          transform: translateY(-40px);
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <script>
+      const cursor = document.getElementById('cursorMouse')
+
+      if (cursor) {
+        const cursorMove = (e: MouseEvent) => {
+          cursor.style.top = `${e.clientY}px`
+          cursor.style.left = `${e.clientX}px`
+        }
+
+        window.addEventListener('mousemove', cursorMove)
+      }
+    </script>
+  </body>
+</html>

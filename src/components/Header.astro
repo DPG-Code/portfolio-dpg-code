@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets'
+---
+
+<header class='z-50 w-full bg-[#0D0D0D] fixed top-0'>
+  <nav
+    class='navbar px-6 h-16 w-full flex items-center justify-between sm:px-16 lg:px-24 lg:h-24 2xl:px-36 2xl:h-32'
+  >
+    <a href='#home'>
+      <Image
+        width='40'
+        height='40'
+        src='/assets/logo.webp'
+        class='logo w-auto h-6 invert aspect-square lg:h-8 2xl:h-10'
+        alt='logo'
+        aria-label='Reload and go to home page'
+        fetch-priority='high'
+      />
+    </a>
+    <ul
+      class='h-full flex gap-4 font-semibold text-xs lg:text-base lg:gap-10 2xl:text-xl 2xl:gap-16'
+    >
+      <li class='h-full flex items-center justify-center relative'>
+        <a
+          class='text-neutral-400 hover:text-white'
+          href='#home'
+          aria-label='Go to section home'
+        >
+          HOME</a
+        >
+        <div class='dot absolute bottom-0 bg-[#f3d335]'></div>
+      </li>
+      <li class='h-full flex items-center justify-center relative'>
+        <a
+          class='text-neutral-400 hover:text-white'
+          href='#works'
+          aria-label='Go to section works'
+        >
+          WORKS</a
+        >
+        <div class='dot absolute bottom-0 bg-[#f3d335]'></div>
+      </li>
+      <li class='h-full flex items-center justify-center relative'>
+        <a
+          class='text-neutral-400 hover:text-white'
+          href='#contact'
+          aria-label='Go to section contact'
+        >
+          CONTACT</a
+        >
+        <div class='dot absolute bottom-0 bg-[#f3d335]'></div>
+      </li>
+    </ul>
+  </nav>
+</header>
