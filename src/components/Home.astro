@@ -1,6 +1,5 @@
 ---
 import { MEDIA_BUTTONS } from '../consts'
-import { IconDownload } from './Icons'
 ---
 
 <main
@@ -38,7 +37,19 @@ import { IconDownload } from './Icons'
         class='icon-animation font-semibold text-xs text-[#FFFFFF] flex items-center justify-center gap-2 xs:text-sm sm:text-base sm:gap-4 2xl:text-2xl 2xl:gap-6'
       >
         DOWNLOAD CV
-        <IconDownload />
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke-width={2}
+          stroke='#F3D335'
+          class='w-3 h-3 sm:w-4 sm:h-4 2xl:w-7 2xl:h-7'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'></path>
+        </svg>
       </a>
     </div>
   </section>

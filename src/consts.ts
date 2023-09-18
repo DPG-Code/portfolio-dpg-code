@@ -2,30 +2,38 @@ const works = [
   {
     title: 'ShoppyFree',
     description:
-      'Shop with speed and ease on our Next.js-powered ecommerce site. Find what you need and buy it fast!',
+      'Next.js-based e-commerce platform packed with feature-rich functionalities.',
     technologies: ['NEXT.JS', 'MONGO DB', 'STRAPI', 'MICRO', 'TAILWIND'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/shoppyfree_xymwpk',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/shoppyfree_otpfco',
     url: 'https://shoppyfree.vercel.app/'
   },
   {
+    title: 'ChatVerse',
+    description:
+      'Real-time chat web application developed in Next.js for seamless communication.',
+    technologies: ['NEXT.JS', 'TYPESCRIPT', 'MONGO DB', 'PRISMA', 'PUSHER', 'TAILWIND'],
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/chatverse_z3khjp',
+    url: 'https://chat-verse-azure.vercel.app/'
+  },
+  {
     title: 'JobsTracker',
-    description: 'Finalist project in the Infojobs Hackathon.',
+    description: 'Infojobs hackathon finalist, a tool to gather job position information effectively.',
     technologies: ['NEXT.JS', 'REACT.JS', 'TAILWIND'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/jobstracker_kjyzcl',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/jobstracker_mlpo6y',
     url: 'https://infojobs-tracker.vercel.app/'
   },
   {
     title: 'Xkcd comics',
     description:
-      'Get ready to chuckle - this project lets you browse and read xkcd comics with ease and enjoyment.',
+      'Explore scraped XKCD comics effortlessly on this interactive web platform.',
     technologies: ['NEXT.JS', 'TAILWIND', 'NEXT UI', 'ALGOLIA'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/xkcd_w6ppjn',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/xkcd_v2wluj',
     url: 'https://xkcd-app-taupe.vercel.app/'
   },
   {
     title: 'Notes app',
     description:
-      'Stay organized and productive - my app is a sleek and intuitive notes app for all your needs.',
+      'User-friendly note-taking web app powered by MongoDB for data storage.',
     technologies: [
       'REACT.JS',
       'NODE.JS',
@@ -33,23 +41,23 @@ const works = [
       'JEST/CYPRESS',
       'TAILWIND'
     ],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/notes_idcfau',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/notesapp_gm3tjr',
     url: 'https://notes-app-dpgcode.up.railway.app/'
   },
   {
     title: 'Weather app',
     description:
-      'Experience the power of Svelte - my project delivers a fast and seamless weather app, built with cutting-edge technology.',
+      'Stay informed about weather conditions with this Svelte-powered web application.',
     technologies: ['SVELTE KIT', 'SVELTE'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/weather_deyk7l',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/weatherapp_mjkftd',
     url: 'https://weather-app-dpg.vercel.app/'
   },
   {
     title: 'Gifree',
     description:
-      'Find the perfect gif - my project is a user-friendly website that lets you search, share and download gifs with ease.',
+      'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
     technologies: ['REACT.JS', 'TYPESCRIPT', 'DENO'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/gifree_ztfjuj',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/gifree_iohqen',
     url: 'https://gi-free.vercel.app/'
   }
 ]
