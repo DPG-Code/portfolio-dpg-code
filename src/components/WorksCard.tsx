@@ -112,6 +112,7 @@ export default function WorksCard() {
         <div className='w-full flex items-center justify-center gap-6 text-[#0D0D0D]   xl:gap-12'>
           <button
             id='prev-project'
+            data-testid='prev-project'
             aria-label='View previous project'
             onClick={prevProject}
           >
@@ -132,6 +133,7 @@ export default function WorksCard() {
           </button>
           <button
             id='next-project'
+            data-testid='next-project'
             aria-label='View next project'
             onClick={nextProject}
           >
