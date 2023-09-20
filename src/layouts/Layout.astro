@@ -45,17 +45,6 @@ const { title } = Astro.props
         font-display: swap;
         font-style: normal;
       }
-      @font-face {
-        font-family: 'InterItalic';
-        src: url('/fonts/Inter-italic.var.woff2') format('woff2');
-        font-weight: 400;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      .Inter-Italic {
-        font-family: 'InterItalic', sans-serif;
-      }
 
       html {
         scroll-behavior: smooth;
@@ -100,12 +89,48 @@ const { title } = Astro.props
       .transition-fade {
         transition: all 0.2s ease-in-out;
       }
-      .icon-animation:hover > svg {
-        transition: all 0.2s ease-in-out;
-        transform: translateX(4px);
+
+      .icon-download,
+      .icon-contact {
+        --primary-color: #a3a3a3;
+        --hovered-color: #ffffff;
+        position: relative;
       }
-      .icon-animation svg {
+      .icon-download p,
+      .icon-contact p {
+        position: relative;
+        color: var(--primary-color);
+      }
+      .icon-download p::before {
+        position: absolute;
+        content: 'DOWNLOAD CV';
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+        transition: 0.2s ease-out;
+      }
+      .icon-contact p::before {
+        position: absolute;
+        content: 'Send an email';
+        width: 0%;
+        inset: 0;
+        color: var(--hovered-color);
+        overflow: hidden;
+        transition: 0.2s ease-out;
+      }
+      .icon-download:hover p::before,
+      .icon-contact:hover p::before {
+        width: 100%;
+      }
+      .icon-download svg,
+      .icon-contact svg {
+        position: relative;
         transition: all 0.2s ease-in-out;
+      }
+      .icon-download:hover svg,
+      .icon-contact:hover svg {
+        transform: translateX(4px);
       }
 
       .navbar a {

@@ -27,14 +27,14 @@ export default function WorksCard() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
         >
           <section className='w-full text-[#0D0D0D] flex flex-col gap-4   sm:w-1/2 sm:justify-center   lg:gap-6 lg:max-w-[500px]   2xl:gap-8 2xl:max-w-[700px]'>
             <header>
               <h3 className='mb-4 font-black text-4xl relative   lg:mb-5 lg:text-5xl   2xl:mb-7 2xl:text-[5rem]'>
                 {project.title.toUpperCase()}
               </h3>
-              <p className='max-w-[280px] Inter-Italic font-semibold text-sm opacity-70   lg:max-w-[620px] lg:text-2xl   2xl:text-3xl'>
+              <p className='max-w-[280px] font-semibold text-sm opacity-70   lg:max-w-[620px] lg:text-2xl   2xl:text-3xl'>
                 {project.description}
               </p>
             </header>
@@ -100,10 +100,10 @@ export default function WorksCard() {
           <motion.span
             className='text-[#F3D335] titleEffect font-extrabold text-7xl   lg:text-9xl   2xl:text-[156px]'
             key={animationKey}
-            initial={{ x: '-100%',opacity: 0 }}
-            animate={{ x: 0,opacity: 1 }}
-            exit={{ x: '100%',opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
           >
             {works.indexOf(project) < 10 && '0'}
             {works.indexOf(project) + 1}
@@ -115,6 +115,7 @@ export default function WorksCard() {
             data-testid='prev-project'
             aria-label='View previous project'
             onClick={prevProject}
+            className='hover:scale-110 transition'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -136,6 +137,7 @@ export default function WorksCard() {
             data-testid='next-project'
             aria-label='View next project'
             onClick={nextProject}
+            className='hover:scale-110 transition'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
