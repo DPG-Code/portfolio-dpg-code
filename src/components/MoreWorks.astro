@@ -16,29 +16,26 @@ import { moreWorks } from '../consts'
   >
     {
       moreWorks.map((project) => (
-        <a
-          href={project.url}
-          target='_blank'
-          class='card-moreworks w-full h-auto flex flex-col items-center justify-start gap-4   sm:items-start   lg:gap-6'
-        >
-          <Image
-            class='w-full max-w-[240px] h-auto rounded-xl   sm:max-w-xs'
-            width='320'
-            height='180'
-            src={project.picture}
-            alt={project.title}
-          />
-          <h3 class='font-normal text-xl text-[#FFFFFF]   lg:text-2xl   2xl:text-3xl'>
-            {project.title}
-          </h3>
-          <div class='flex flex-wrap gap-2   lg:gap-x-3'>
-            {project.tech.map((tech) => (
-              <p class='px-3 py-1 rounded-full text-[10px] font-light border border-neutral-700 text-neutral-400   lg:text-xs'>
-                {tech}
-              </p>
-            ))}
-          </div>
-        </a>
+        <div class='w-full h-auto flex'>
+          <a
+            href={project.url}
+            target='_blank'
+            class='card-moreworks m-auto w-full max-w-[240px] flex relative overflow-hidden rounded-xl   sm:max-w-xs'
+          >
+            <div class='w-full h-full backdrop-blur-lg bg-[#0d0d0d]/75 grid place-content-center absolute opacity-0 hover:opacity-100 transition-opacity duration-500'>
+              <h3 class='font-extrabold text-xl text-white   lg:text-2xl   2xl:text-3xl'>
+                {project.title.toUpperCase()}
+              </h3>
+            </div>
+            <Image
+              class='m-auto w-full max-w-[240px] h-auto rounded-xl   sm:max-w-xs'
+              width='320'
+              height='180'
+              src={project.picture}
+              alt={project.title}
+            />
+          </a>
+        </div>
       ))
     }
   </section>

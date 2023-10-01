@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { works } from '../consts.ts'
+import { Technologies } from './Technologies.tsx'
+import type { TechnologieType } from '../types'
 
 export default function WorksCard() {
   const [project,setProject] = useState(works[0])
@@ -29,34 +31,30 @@ export default function WorksCard() {
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
         >
-          <section className='w-full text-[#0D0D0D] flex flex-col gap-4   sm:w-1/2 sm:justify-center   lg:gap-6 lg:max-w-[500px]   2xl:gap-8 2xl:max-w-[700px]'>
+          <section className='w-full text-[#0D0D0D] flex flex-col gap-6   sm:w-1/2 sm:justify-center   lg:gap-6 lg:max-w-[500px]   2xl:gap-8 2xl:max-w-[700px]'>
             <header>
               <h3 className='mb-4 font-black text-4xl relative   lg:mb-5 lg:text-5xl   2xl:mb-7 2xl:text-[5rem]'>
                 {project.title.toUpperCase()}
               </h3>
-              <p className='max-w-[280px] font-semibold text-sm opacity-70   lg:max-w-[620px] lg:text-2xl   2xl:text-3xl'>
+              <p className='max-w-[280px] font-semibold text-sm opacity-80   lg:max-w-[620px] lg:text-2xl   2xl:text-3xl'>
                 {project.description}
               </p>
             </header>
-            <ul className='font-bold text-[10px] flex flex-wrap gap-x-2 gap-y-1   lg:text-lg   2xl:text-xl'>
+            <ul className='font-bold text-[10px] flex flex-wrap gap-x-3 gap-y-1   lg:text-lg lg:gap-x-6 lg:gap-y-2   2xl:text-xl'>
               {project.technologies.map((tech,index) =>
-                index + 1 < project.technologies.length ? (
-                  <li
-                    key={tech}
-                    className='flex items-center justify-center gap-x-2'
-                  >
-                    {tech}
-                    <span>-</span>
-                  </li>
-                ) : (
-                  <li key={tech}>{tech}</li>
-                )
+                <li
+                  key={tech}
+                  className='tooltip flex items-center justify-center gap-x-2'
+                >
+                  <Technologies icon={tech as TechnologieType} />
+                  <span className="tooltiptext">{tech}</span>
+                </li>
               )}
             </ul>
             <a
               href={project.url}
               target='_blank'
-              className='icon-animation font-bold text-sm flex items-center justify-start gap-2   lg:text-2xl lg:gap-4   2xl:text-3xl'
+              className='icon-work font-bold text-base flex items-center justify-start gap-2   lg:text-2xl lg:gap-4   2xl:text-3xl'
             >
               OPEN PROJECT
               <svg
