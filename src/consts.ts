@@ -3,7 +3,7 @@ const works = [
     title: 'ChatVerse',
     description:
       'Real-time chat web application developed in Next.js for seamless communication.',
-    technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress'],
+    technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress','pusher'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/chatverse_z3khjp',
     url: 'https://chat-verse-azure.vercel.app/'
   },
@@ -11,7 +11,7 @@ const works = [
     title: 'ShoppyFree',
     description:
       'Next.js-based e-commerce platform packed with feature-rich functionalities.',
-    technologies: ['nextjs','mongodb','tailwind'],
+    technologies: ['nextjs','mongodb','tailwind','stripe'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/shoppyfree_otpfco',
     url: 'https://shoppyfree.vercel.app/'
   },
@@ -26,7 +26,7 @@ const works = [
     title: 'Xkcd comics',
     description:
       'Explore scraped XKCD comics effortlessly on this interactive web platform.',
-    technologies: ['nextjs','tailwind','algolia'],
+    technologies: ['nextjs','reactjs','tailwind','algolia'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/xkcd_v2wluj',
     url: 'https://xkcd-app-taupe.vercel.app/'
   },
@@ -38,8 +38,9 @@ const works = [
       'reactjs',
       'nodejs',
       'mongodb',
-      'cypress',
-      'tailwind'
+      'express',
+      'tailwind',
+      'sentry'
     ],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/notesapp_gm3tjr',
     url: 'https://notes-app-dpgcode.up.railway.app/'
@@ -48,7 +49,7 @@ const works = [
     title: 'Gifree',
     description:
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
-    technologies: ['reactjs','typescript','deno'],
+    technologies: ['reactjs','typescript','deno','testinglibrary'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/gifree_iohqen',
     url: 'https://gi-free.vercel.app/'
   }
