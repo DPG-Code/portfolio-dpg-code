@@ -34,7 +34,7 @@ const { title } = Astro.props
     />
   </head>
   <body class='bg-[#0D0D0D] relative'>
-    <div id='cursorMouse' class='max-[600px]:hidden'></div>
+    <!-- <div id='cursorMouse' class='max-[600px]:hidden'></div> -->
     <Header />
     <slot />
     <style is:global>
@@ -66,7 +66,7 @@ const { title } = Astro.props
         transition: all 0.5s ease;
       }
 
-      #cursorMouse {
+      /* #cursorMouse {
         width: 320px;
         height: 320px;
         background: linear-gradient(
@@ -83,7 +83,7 @@ const { title } = Astro.props
         pointer-events: none;
         transform: translate(-50%, -50%);
         overflow: hidden;
-      }
+      } */
 
       /* Animations */
       .transition-fade {
@@ -96,11 +96,17 @@ const { title } = Astro.props
         --hovered-color: #ffffff;
         position: relative;
       }
-      .icon-download p,
-      .icon-contact p {
+      .icon-download p {
         position: relative;
         color: var(--primary-color);
       }
+      .icon-work p {
+        color: #a3a3a3;
+      }
+      .icon-contact p {
+        color: var(--hovered-color);
+      }
+
       .icon-download p::before {
         position: absolute;
         content: 'DOWNLOAD CV';
@@ -110,17 +116,8 @@ const { title } = Astro.props
         overflow: hidden;
         transition: 0.2s ease-out;
       }
-      .icon-contact p::before {
-        position: absolute;
-        content: 'Send an email';
-        width: 0%;
-        inset: 0;
-        color: var(--hovered-color);
-        overflow: hidden;
-        transition: 0.2s ease-out;
-      }
-      .icon-download:hover p::before,
-      .icon-contact:hover p::before {
+
+      .icon-download:hover p::before {
         width: 100%;
       }
       .icon-download svg,
@@ -132,35 +129,20 @@ const { title } = Astro.props
       .icon-download:hover svg,
       .icon-contact:hover svg,
       .icon-work:hover svg {
-        transform: translateX(4px);
+        transform: translateX(6px);
       }
 
-      .navbar a {
-        transition: all 0.2s ease-in-out;
+      .icon-work:hover p {
+        color: var(--hovered-color);
+        transition: 0.2s ease-out;
       }
-      .navbar .dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        opacity: 0;
-        transition: all 0.2s ease-in-out;
-      }
-      .navbar a:hover ~ .dot {
-        transform: translateY(-18px);
-        opacity: 1;
-      }
-
-      @media only screen and (min-width: 1024px) {
-        .navbar a:hover ~ .dot {
-          transform: translateY(-30px);
-          opacity: 1;
-        }
-      }
-      @media only screen and (min-width: 1536px) {
-        .navbar a:hover ~ .dot {
-          transform: translateY(-40px);
-          opacity: 1;
-        }
+      .icon-download:hover p,
+      .icon-contact:hover p {
+        text-shadow:
+          0 5px 20px rgba(255, 255, 255, 0.1),
+          0 -5px 15px rgba(255, 255, 255, 0.15),
+          0 0 30px rgba(255, 255, 255, 0.025);
+        transition: 0.2s ease-out;
       }
     </style>
 

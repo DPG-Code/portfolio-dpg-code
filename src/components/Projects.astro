@@ -1,0 +1,82 @@
+---
+import ProjectsCard from './ProjectsCard'
+---
+
+<section
+  id='projects'
+  class='py-16 px-6 flex flex-col gap-12 xl:gap-20 xl:p-36'
+>
+  <div class='w-full h-[2px] bg-neutral-900'></div>
+  <header class='flex items-center justify-start gap-4 xl:gap-6'>
+    <div class='dot-title'></div>
+    <h2 class='w-full z-40 font-semibold text-lg text-neutral-500 2xl:text-2xl'>
+      PROJECTS
+    </h2>
+  </header>
+  <ProjectsCard client:only />
+</section>
+
+<style is:global>
+  .dot-title {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffffff;
+  }
+
+  .tooltip {
+    position: relative;
+  }
+  .tooltip .tooltiptext {
+    margin-top: -62px;
+    visibility: hidden;
+    padding: 4px 12px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .titleEffect {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff0c;
+  }
+
+  .project-card {
+    outline-offset: -1px;
+    background-color: rgba(242, 242, 242, 0.04);
+    outline: 1px solid rgba(242, 242, 242, 0.05);
+    box-shadow: 0 20px 60px rgba(13, 13, 13, 0.5);
+  }
+
+  .project-card-content {
+    border: 1px solid #3d3d3d;
+    background-image: radial-gradient(
+      circle at 50% 0,
+      rgba(255, 255, 255, 0.05),
+      rgba(13, 13, 13)
+    );
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .tooltip .tooltiptext {
+      margin-top: -108px;
+      padding: 6px 16px;
+      font-size: 1.1em;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .dot-title {
+      width: 14px;
+      height: 14px;
+    }
+  }
+</style>

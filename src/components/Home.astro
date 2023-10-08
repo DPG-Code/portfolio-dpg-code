@@ -11,7 +11,7 @@ import { MEDIA_BUTTONS } from '../consts'
   >
     <h1
       id='title-home'
-      class='font-extrabold text-[#F3D335] text-center leading-tight flex flex-col gap-2'
+      class='font-extrabold text-[#F3D335] text-center leading-tight flex flex-col gap-2 z-30'
     >
       front-end developer{' '}
       <span class='text-3xl text-[#FFFFFF] lg:text-5xl'>
@@ -74,3 +74,62 @@ import { MEDIA_BUTTONS } from '../consts'
     </ul>
   </footer>
 </main>
+
+<style is:global>
+  #title-home:after,
+  #title-contact::before,
+  #title-home:before,
+  #title-contact::after {
+    content: '';
+    left: 50%;
+    position: absolute;
+    filter: blur(45px);
+    transform: translateZ(0);
+  }
+  #title-home:before,
+  #title-contact::before {
+    background: var(--left-glow);
+    border-radius: 50%;
+    width: 480px;
+    height: 360px;
+    margin-left: -400px;
+  }
+  #title-home:after,
+  #title-contact::after {
+    background: var(--right-glow);
+    width: 240px;
+    height: 180px;
+    z-index: -1;
+  }
+
+  #title-home {
+    font-size: var(--font-size-xl);
+  }
+  #description-home {
+    font-size: var(--font-size-base);
+  }
+
+  @media only screen and (max-width: 600px) {
+    #title-home:after,
+    #title-contact::before,
+    #title-home:before,
+    #title-contact::after {
+      left: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    #title-home {
+      font-size: var(--font-size-xxl);
+    }
+  }
+
+  @media only screen and (min-width: 1536px) {
+    #title-home {
+      font-size: var(--font-size-xxxl);
+    }
+    #description-home {
+      font-size: var(--font-size-md);
+    }
+  }
+</style>

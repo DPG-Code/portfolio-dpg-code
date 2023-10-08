@@ -8,7 +8,7 @@ import { MEDIA_BUTTONS } from '../consts'
 >
   <h2
     id='title-contact'
-    class='z-30 font-bold text-3xl text-[#FFFFFF] text-center drop-shadow-2xl sm:text-5xl 2xl:text-8xl'
+    class='text-shadow z-30 font-bold text-3xl text-[#FFFFFF] text-center drop-shadow-2xl sm:text-5xl 2xl:text-8xl'
   >
     Let's works together
   </h2>
@@ -32,7 +32,7 @@ import { MEDIA_BUTTONS } from '../consts'
         d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'></path>
     </svg>
   </a>
-  <div class='circle_contact-1 animate-pulse opacity-75'></div>
+  <div class='circle_contact-1 animate-pulse opacity-50'></div>
   <footer
     class='z-30 w-full h-16 flex items-start justify-center absolute bottom-0 sm:h-24 2xl:h3-2'
   >
@@ -57,3 +57,36 @@ import { MEDIA_BUTTONS } from '../consts'
     </ul>
   </footer>
 </div>
+
+<style>
+  .circle_contact-1 {
+    width: 220px;
+    height: 220px;
+    border: 0.9em solid #f3d335;
+    border-radius: 100%;
+    position: absolute;
+  }
+
+  .text-shadow {
+    text-shadow:
+      0 5px 20px rgba(255, 255, 255, 0.075),
+      0 -5px 15px rgba(255, 255, 255, 0.1),
+      0 0 30px rgba(255, 255, 255, 0.02);
+  }
+
+  @media only screen and (min-width: 640px) {
+    .circle_contact-1 {
+      width: 320px;
+      height: 320px;
+      border: 1.3em solid #f3d335;
+    }
+  }
+
+  @media only screen and (min-width: 1536px) {
+    .circle_contact-1 {
+      width: 460px;
+      height: 460px;
+      border: 1.7em solid #f3d335;
+    }
+  }
+</style>

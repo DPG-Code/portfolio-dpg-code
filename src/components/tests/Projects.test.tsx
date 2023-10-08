@@ -1,12 +1,12 @@
 import { fireEvent,render,screen } from "@testing-library/react"
 
-import WorksCard from "../WorksCard"
+import ProjectsCard from "../ProjectsCard"
 import { works } from "../../consts"
 
-describe('WorksCard Component - First Item Rendering',() => {
+describe('ProjectsCard Component - First Item Rendering',() => {
   beforeEach(() => {
     render(
-      <WorksCard />
+      <ProjectsCard />
     )
   })
 
@@ -44,7 +44,7 @@ describe('WorksCard Component - First Item Rendering',() => {
 describe('WorksCard Component - Functionality',() => {
   beforeEach(() => {
     render(
-      <WorksCard />
+      <ProjectsCard />
     )
   })
 

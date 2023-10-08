@@ -21,22 +21,22 @@ export default function WorksCard() {
   }
 
   return (
-    <article className='flex flex-col overflow-hidden'>
-      <div className='px-6 w-full h-screen min-h-[780px] bg-[#F3D335] flex flex-col items-center justify-center gap-12 relative   sm:min-h-[960px] sm:px-16   lg:px-24   2xl:px-36'>
+    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[36px]   xl:p-3'>
+      <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 relative rounded-3xl   xl:p-12 xl:gap-6'>
         <motion.header
-          className='w-full flex flex-col items-center justify-center gap-12   sm:flex-row sm:justify-between sm:gap-12   2xl:gap-24'
+          className='w-full flex flex-col items-center justify-center gap-6   sm:flex-row sm:justify-between'
           key={animationKey}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
         >
-          <section className='w-full text-[#0D0D0D] flex flex-col gap-6   sm:w-1/2 sm:justify-center   lg:gap-6 lg:max-w-[500px]   2xl:gap-8 2xl:max-w-[700px]'>
+          <section className='w-full text-white flex flex-col gap-6   sm:w-1/2 sm:justify-center   lg:gap-6 lg:max-w-[500px]   2xl:gap-8 2xl:max-w-[700px]'>
             <header>
-              <h3 className='mb-4 font-black text-4xl relative   lg:mb-5 lg:text-5xl   2xl:mb-7 2xl:text-[5rem]'>
+              <h3 className='mb-4 font-bold text-2xl relative   lg:mb-5 lg:text-4xl   2xl:mb-7 2xl:text-6xl'>
                 {project.title.toUpperCase()}
               </h3>
-              <p className='max-w-[280px] font-semibold text-sm opacity-80   lg:max-w-[620px] lg:text-2xl   2xl:text-3xl'>
+              <p className='max-w-[280px] font-normal text-xs text-neutral-400   lg:max-w-[620px] lg:text-lg   2xl:text-2xl'>
                 {project.description}
               </p>
             </header>
@@ -54,9 +54,9 @@ export default function WorksCard() {
             <a
               href={project.url}
               target='_blank'
-              className='icon-work font-bold text-base flex items-center justify-start gap-2   lg:text-2xl lg:gap-4   2xl:text-3xl'
+              className='icon-work font-medium text-xs flex items-center justify-start gap-2   lg:text-xl lg:gap-4   2xl:text-2xl'
             >
-              OPEN PROJECT
+              <p>OPEN PROJECT</p>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -96,7 +96,7 @@ export default function WorksCard() {
         </motion.header>
         <footer className='w-full flex justify-center   sm:justify-start'>
           <motion.span
-            className='text-[#F3D335] titleEffect font-extrabold text-7xl   lg:text-9xl   2xl:text-[156px]'
+            className='text-transparent titleEffect font-extrabold text-7xl   lg:text-9xl   2xl:text-[156px]'
             key={animationKey}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -107,13 +107,13 @@ export default function WorksCard() {
             {works.indexOf(project) + 1}
           </motion.span>
         </footer>
-        <div className='w-full flex items-center justify-center gap-6 text-[#0D0D0D]   xl:gap-12'>
+        <div className='w-full flex items-center justify-center gap-6 text-neutral-500   xl:gap-12'>
           <button
             id='prev-project'
             data-testid='prev-project'
             aria-label='View previous project'
             onClick={prevProject}
-            className='hover:scale-110 transition'
+            className='hover:text-white hover:scale-110 transition'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -135,7 +135,7 @@ export default function WorksCard() {
             data-testid='next-project'
             aria-label='View next project'
             onClick={nextProject}
-            className='hover:scale-110 transition'
+            className='hover:text-white hover:scale-110 transition'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

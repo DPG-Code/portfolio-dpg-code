@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets'
+import { moreWorks } from '../consts'
+---
+
+<article class='py-16 px-6 flex flex-col gap-12 xl:gap-20 xl:p-36'>
+  <div class='w-full h-[2px] bg-neutral-900'></div>
+  <header class='flex items-center justify-start gap-4 xl:gap-6'>
+    <div class='dot-title'></div>
+    <h2 class='w-full z-40 font-semibold text-lg text-neutral-500 2xl:text-2xl'>
+      MORE PROJECTS
+    </h2>
+  </header>
+  <section
+    class='w-full grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-4 xl:gap-16'
+  >
+    {
+      moreWorks.map((project) => (
+        <div class='w-full h-auto flex'>
+          <a
+            href={project.url}
+            target='_blank'
+            class='card-more-works m-auto p-2 w-full max-w-[272px] rounded-2xl hover:scale-105 transition duration-200   sm:max-w-md'
+          >
+            <Image
+              class='w-full h-auto rounded-xl'
+              width='320'
+              height='180'
+              src={project.picture}
+              alt={project.title}
+            />
+          </a>
+        </div>
+      ))
+    }
+  </section>
+</article>
+
+<style>
+  .dot-title {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffffff;
+  }
+
+  .card-more-works {
+    backdrop-filter: none;
+    outline-offset: -1px;
+    background-image: radial-gradient(
+      circle farthest-side at 50% 0,
+      rgba(242, 242, 242, 0.2),
+      rgba(13, 13, 13, 0.5)
+    );
+    outline: 1px solid rgba(242, 242, 242, 0.15);
+    box-shadow: 0 10px 15px rgba(13, 13, 13, 0.5);
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .dot-title {
+      width: 14px;
+      height: 14px;
+    }
+  }
+</style>
