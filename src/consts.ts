@@ -96,6 +96,15 @@ const moreWorks = [
       'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/games_xwehp8',
     url: 'https://dpg-games.netlify.app/',
     tech: ['React.JS','Wouter','Vite']
+  },
+  {
+    title: 'Unlimited BBQ',
+    description:
+      'Landing page for a colombian BBQ Restaurant.',
+    picture:
+      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/unlimitedbbq_qeavnn',
+    url: 'https://unlimited-bbq.netlify.app/',
+    tech: ['Html','Css','Javascript']
   }
 ]
 

@@ -12,7 +12,7 @@ import { moreWorks } from '../consts'
     </h2>
   </header>
   <section
-    class='w-full grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-4 xl:gap-16'
+    class='w-full grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 xl:grid-cols-4 xl:gap-12'
   >
     {
       moreWorks.map((project) => (
@@ -20,7 +20,7 @@ import { moreWorks } from '../consts'
           <a
             href={project.url}
             target='_blank'
-            class='card-more-works m-auto p-2 w-full max-w-[272px] rounded-2xl hover:scale-105 transition duration-200   sm:max-w-md'
+            class='card-more-works m-auto p-1 w-full max-w-[272px] rounded-2xl hover:scale-105 transition duration-200   sm:max-w-md   xl:p-2'
           >
             <Image
               class='w-full h-auto rounded-xl'
