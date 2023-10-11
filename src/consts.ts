@@ -68,7 +68,7 @@ const moreWorks = [
     title: 'Cleanbg',
     description: 'Quickly remove image backgrounds with our app.',
     picture:
-      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/cleanbg_be7y16',
+      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/cleanbg_keregm',
     url: 'https://clean-bg.vercel.app/',
     tech: ['Svelte','Cloudinary','Tailwind']
   },
