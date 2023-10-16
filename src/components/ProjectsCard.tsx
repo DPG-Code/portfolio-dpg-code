@@ -54,7 +54,7 @@ export default function WorksCard() {
             <a
               href={project.url}
               target='_blank'
-              className='icon-work font-medium text-xs flex items-center justify-start gap-2   lg:text-xl lg:gap-4   2xl:text-2xl'
+              className='icon-work max-w-max font-medium text-xs flex items-center justify-start gap-3   lg:text-xl lg:gap-4   2xl:text-2xl'
             >
               <p>OPEN PROJECT</p>
               <svg
@@ -63,7 +63,7 @@ export default function WorksCard() {
                 viewBox='0 0 24 24'
                 strokeWidth={2}
                 stroke='currentColor'
-                className='w-5 h-5   2xl:w-8 2xl:h-8'
+                className='w-4 h-4   2xl:w-8 2xl:h-8'
               >
                 <path
                   strokeLinecap='round'
