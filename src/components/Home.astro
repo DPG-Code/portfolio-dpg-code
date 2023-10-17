@@ -11,16 +11,16 @@ import { MEDIA_BUTTONS } from '../consts'
   >
     <h1
       id='title-home'
-      class='font-extrabold text-[#F3D335] text-center leading-tight flex flex-col gap-2'
+      class='font-bold text-[#F3D335] text-center leading-tight flex flex-col gap-2'
     >
       front-end developer{' '}
-      <span class='text-3xl text-[#FFFFFF] lg:text-5xl'>
+      <span class='font-medium text-2xl text-[#FFFFFF] lg:text-5xl'>
         & graphic designer.
       </span>
     </h1>
     <h2
       id='description-home'
-      class='max-w-4xl font-semibold text-center text-neutral-400'
+      class='max-w-xs font-semibold text-center text-neutral-400 lg:max-w-4xl'
     >
       I'm Daniel Prieto. I have{' '}
       <span class='text-white'>+2 years</span> of experience working as a
@@ -107,7 +107,7 @@ import { MEDIA_BUTTONS } from '../consts'
     font-size: var(--font-size-xl);
   }
   #description-home {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
   }
 
   @media only screen and (max-width: 600px) {
@@ -122,6 +122,9 @@ import { MEDIA_BUTTONS } from '../consts'
   @media only screen and (min-width: 1024px) {
     #title-home {
       font-size: var(--font-size-xxl);
+    }
+    #description-home {
+      font-size: var(--font-size-base);
     }
   }
 
