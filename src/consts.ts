@@ -51,7 +51,7 @@ const works = [
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
     technologies: ['reactjs','typescript','deno','testinglibrary'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/gifree_iohqen',
-    url: 'https://gi-free.vercel.app/'
+    url: 'https://gifree.vercel.app/'
   }
 ]
 
