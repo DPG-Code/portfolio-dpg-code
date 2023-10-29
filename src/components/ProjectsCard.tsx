@@ -21,7 +21,7 @@ export default function WorksCard() {
   }
 
   return (
-    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[36px]   xl:p-3'>
+    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px]   lg:rounded-[36px] xl:p-3'>
       <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 relative rounded-3xl   xl:p-12 xl:gap-6'>
         <motion.header
           className='w-full flex flex-col items-center justify-center gap-6   sm:flex-row sm:justify-between'
@@ -54,7 +54,7 @@ export default function WorksCard() {
             <a
               href={project.url}
               target='_blank'
-              className='icon-work max-w-max font-medium text-xs flex items-center justify-start gap-3   lg:text-xl lg:gap-4   2xl:text-2xl'
+              className='icon-work max-w-max text-[#a3a3a3] hover:text-white font-medium text-xs flex items-center justify-start gap-3 transition   lg:text-xl lg:gap-4   2xl:text-2xl'
             >
               <p>OPEN PROJECT</p>
               <svg

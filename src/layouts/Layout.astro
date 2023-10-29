@@ -90,36 +90,6 @@ const { title } = Astro.props
         transition: all 0.2s ease-in-out;
       }
 
-      .icon-download,
-      .icon-contact {
-        --primary-color: #a3a3a3;
-        --hovered-color: #ffffff;
-        position: relative;
-      }
-      .icon-download p {
-        position: relative;
-        color: var(--primary-color);
-      }
-      .icon-work p {
-        color: #a3a3a3;
-      }
-      .icon-contact p {
-        color: var(--hovered-color);
-      }
-
-      .icon-download p::before {
-        position: absolute;
-        content: 'DOWNLOAD CV';
-        width: 0%;
-        inset: 0;
-        color: var(--hovered-color);
-        overflow: hidden;
-        transition: 0.2s ease-out;
-      }
-
-      .icon-download:hover p::before {
-        width: 100%;
-      }
       .icon-download svg,
       .icon-contact svg,
       .icon-work svg {
@@ -132,10 +102,6 @@ const { title } = Astro.props
         transform: translateX(6px);
       }
 
-      .icon-work:hover p {
-        color: var(--hovered-color);
-        transition: 0.2s ease-out;
-      }
       .icon-download:hover p,
       .icon-contact:hover p {
         text-shadow:
