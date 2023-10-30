@@ -11,7 +11,7 @@ const works = [
     title: 'ShoppyFree',
     description:
       'Next.js-based e-commerce platform packed with feature-rich functionalities.',
-    technologies: ['nextjs','mongodb','tailwind','stripe'],
+    technologies: ['nextjs','mongodb','mongoose','tailwind','stripe'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/shoppyfree_otpfco',
     url: 'https://shoppyfree.vercel.app/'
   },
@@ -49,7 +49,7 @@ const works = [
     title: 'Gifree',
     description:
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
-    technologies: ['reactjs','typescript','deno','testinglibrary'],
+    technologies: ['nextjs','reactjs','tailwind'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/gifree_iohqen',
     url: 'https://gifree.vercel.app/'
   }
