@@ -21,26 +21,26 @@ export default function WorksCard() {
   }
 
   return (
-    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px]   lg:rounded-[36px] xl:p-3'>
-      <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 relative rounded-3xl   xl:p-12 xl:gap-6'>
+    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px] lg:rounded-[36px] xl:p-3'>
+      <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 relative rounded-3xl xl:p-12 xl:gap-6 2xl:p-16'>
         <motion.header
-          className='w-full flex flex-col items-center justify-center gap-6   sm:flex-row sm:justify-between'
+          className='w-full flex flex-col items-center justify-center gap-6 sm:flex-row sm:justify-between'
           key={animationKey}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
         >
-          <section className='w-full text-white flex flex-col gap-6   sm:w-1/2 sm:justify-center   lg:gap-6 lg:max-w-[500px]   2xl:gap-8 2xl:max-w-[700px]'>
+          <section className='w-full text-white flex flex-col gap-6 sm:w-2/5 sm:justify-center lg:gap-6 2xl:gap-8 2xl:w-1/2'>
             <header>
-              <h3 className='mb-4 font-bold text-2xl relative   lg:mb-5 lg:text-4xl   2xl:mb-7 2xl:text-6xl'>
+              <h3 className='mb-4 font-bold text-2xl relative lg:mb-5 lg:text-4xl 2xl:mb-7 2xl:text-6xl'>
                 {project.title.toUpperCase()}
               </h3>
-              <p className='max-w-[280px] font-normal text-xs text-neutral-400   lg:max-w-[620px] lg:text-lg   2xl:text-2xl'>
+              <p className='max-w-[280px] font-normal text-xs text-neutral-400 lg:max-w-[620px] lg:text-lg 2xl:text-2xl'>
                 {project.description}
               </p>
             </header>
-            <ul className='font-bold text-[10px] flex flex-wrap gap-x-3 gap-y-1   lg:text-lg lg:gap-x-6 lg:gap-y-2   2xl:text-xl'>
+            <ul className='font-bold text-[10px] flex flex-wrap gap-x-3 gap-y-1 lg:text-lg lg:gap-x-6 lg:gap-y-2 2xl:text-xl'>
               {project.technologies.map((tech,index) =>
                 <li
                   key={tech}
@@ -54,7 +54,7 @@ export default function WorksCard() {
             <a
               href={project.url}
               target='_blank'
-              className='icon-work max-w-max text-[#a3a3a3] hover:text-white font-medium text-xs flex items-center justify-start gap-3 transition   lg:text-xl lg:gap-4   2xl:text-2xl'
+              className='icon-work max-w-max text-[#a3a3a3] hover:text-white font-medium text-xs flex items-center justify-start gap-3 transition lg:text-xl lg:gap-4 2xl:text-2xl'
             >
               <p>OPEN PROJECT</p>
               <svg
@@ -63,7 +63,7 @@ export default function WorksCard() {
                 viewBox='0 0 24 24'
                 strokeWidth={2}
                 stroke='currentColor'
-                className='w-4 h-4   2xl:w-8 2xl:h-8'
+                className='w-4 h-4 2xl:w-8 2xl:h-8'
               >
                 <path
                   strokeLinecap='round'
@@ -73,16 +73,16 @@ export default function WorksCard() {
               </svg>
             </a>
           </section>
-          <aside className='flex items-center justify-center   sm:w-1/2 sm:justify-end'>
+          <aside className='flex items-center justify-center sm:w-3/5 sm:justify-end 2xl:w-1/2'>
             <a
               className='w-full flex items-center justify-center hover:scale-105 transition duration-200'
               href={project.url}
               target='_blank'
             >
               <motion.img
-                className='w-72 h-auto drop-shadow-2xl  lg:w-full lg:aspect-video'
-                width='820'
-                height='460'
+                className='w-full h-auto drop-shadow-2xl lg:aspect-video'
+                width='960'
+                height='540'
                 src={project.img}
                 alt={project.title}
                 key={animationKey}
@@ -94,9 +94,9 @@ export default function WorksCard() {
             </a>
           </aside>
         </motion.header>
-        <footer className='w-full flex justify-center   sm:justify-start'>
+        <footer className='w-full flex justify-center sm:justify-start'>
           <motion.span
-            className='text-transparent titleEffect font-extrabold text-7xl   lg:text-9xl   2xl:text-[156px]'
+            className='text-transparent titleEffect font-extrabold text-7xl lg:text-9xl 2xl:text-[156px]'
             key={animationKey}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -107,7 +107,7 @@ export default function WorksCard() {
             {works.indexOf(project) + 1}
           </motion.span>
         </footer>
-        <div className='w-full flex items-center justify-center gap-6 text-neutral-500   xl:gap-12'>
+        <div className='w-full flex items-center justify-center gap-6 text-neutral-500 xl:gap-12'>
           <button
             id='prev-project'
             data-testid='prev-project'
@@ -121,7 +121,7 @@ export default function WorksCard() {
               viewBox='0 0 24 24'
               strokeWidth={1}
               stroke='currentColor'
-              className='w-10 h-10   lg:w-12 lg:h-12   2xl:w-16 2xl:h-16'
+              className='w-10 h-10 lg:w-12 lg:h-12 2xl:w-16 2xl:h-16'
             >
               <path
                 strokeLinecap='round'
@@ -143,7 +143,7 @@ export default function WorksCard() {
               viewBox='0 0 24 24'
               strokeWidth={1}
               stroke='currentColor'
-              className='w-10 h-10   lg:w-12 lg:h-12   2xl:w-16 2xl:h-16'
+              className='w-10 h-10 lg:w-12 lg:h-12 2xl:w-16 2xl:h-16'
             >
               <path
                 strokeLinecap='round'

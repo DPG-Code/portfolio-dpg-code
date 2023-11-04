@@ -4,7 +4,7 @@ const works = [
     description:
       'Real-time chat web application developed in Next.js for seamless communication.',
     technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress','pusher'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/chatverse_z3khjp',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/chatverse_z3khjp',
     url: 'https://chat-verse-azure.vercel.app/'
   },
   {
@@ -12,14 +12,14 @@ const works = [
     description:
       'Next.js-based e-commerce platform packed with feature-rich functionalities.',
     technologies: ['nextjs','mongodb','mongoose','tailwind','stripe'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/shoppyfree_otpfco',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/shoppyfree_otpfco',
     url: 'https://shoppyfree.vercel.app/'
   },
   {
     title: 'JobsTracker',
     description: 'Infojobs hackathon finalist, a tool to gather job position information effectively.',
     technologies: ['nextjs','reactjs','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/jobstracker_mlpo6y',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/jobstracker_mlpo6y',
     url: 'https://infojobs-tracker.vercel.app/'
   },
   {
@@ -27,7 +27,7 @@ const works = [
     description:
       'Explore scraped XKCD comics effortlessly on this interactive web platform.',
     technologies: ['nextjs','reactjs','tailwind','algolia'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/xkcd_v2wluj',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/xkcd_v2wluj',
     url: 'https://xkcd-app-taupe.vercel.app/'
   },
   {
@@ -42,7 +42,7 @@ const works = [
       'tailwind',
       'sentry'
     ],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/notesapp_gm3tjr',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/notesapp_gm3tjr',
     url: 'https://notes-app-dpgcode.up.railway.app/'
   },
   {
@@ -50,7 +50,7 @@ const works = [
     description:
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
     technologies: ['nextjs','reactjs','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_240,q_100,w_384/v1677061650/works/portfolio/gifree_iohqen',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/gifree_iohqen',
     url: 'https://gifree.vercel.app/'
   }
 ]
