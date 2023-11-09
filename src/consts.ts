@@ -116,7 +116,7 @@ const MEDIA_BUTTONS = [
     tabIndex: '7'
   },
   {
-    href: 'https://www.linkedin.com/in/daniel-prieto-gaviria',
+    href: 'https://www.linkedin.com/in/daniel-prieto-dpg',
     ariaLabel: 'Open my Linkedin',
     label: 'LinkedIn',
     tabIndex: '8'
