@@ -52,8 +52,26 @@ import ProjectsCard from './ProjectsCard'
   .project-card {
     outline-offset: -1px;
     background-color: rgba(242, 242, 242, 0.04);
-    outline: 1px solid rgba(242, 242, 242, 0.05);
+    outline: 1px solid rgba(242, 242, 242, 0.06);
     box-shadow: 0 20px 60px rgba(13, 13, 13, 0.5);
+    position: relative;
+  }
+  .glare-card {
+    z-index: 1;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(255, 255, 255, 0.6) 35%,
+      rgba(255, 255, 255) 50%,
+      rgba(255, 255, 255, 0.6) 65%,
+      rgba(0, 0, 0, 0) 95%
+    );
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
   }
 
   .project-card-content {
@@ -63,6 +81,24 @@ import ProjectsCard from './ProjectsCard'
       rgba(255, 255, 255, 0.1),
       rgba(13, 13, 13)
     );
+    position: relative;
+  }
+  .glare-content {
+    z-index: 1;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(255, 255, 255, 0.4) 35%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.4) 65%,
+      rgba(0, 0, 0, 0) 95%
+    );
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
   }
 
   @media only screen and (min-width: 1024px) {

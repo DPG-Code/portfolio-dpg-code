@@ -20,15 +20,43 @@ import { moreWorks } from '../consts'
           <a
             href={project.url}
             target='_blank'
-            class='card-more-works m-auto p-1 w-full max-w-[272px] rounded-2xl hover:scale-105 transition duration-200   sm:max-w-md   xl:p-2'
+            class='card-more-works m-auto px-1 w-full max-w-[272px] rounded-lg sm:max-w-md 2xl:px-2 2xl:rounded-xl'
           >
-            <Image
-              class='w-full h-auto rounded-xl'
-              width='320'
-              height='180'
-              src={project.picture}
-              alt={project.title}
-            />
+            <div class='glare-more-works' />
+            <header class='px-2 py-[6px] flex items-center gap-1 2xl:px-3 2xl:py-2'>
+              <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
+              <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
+              <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
+            </header>
+            <div class='w-full h-auto rounded-lg overflow-hidden 2xl:rounded-xl'>
+              <Image
+                class='w-full h-auto object-cover'
+                width='320'
+                height='180'
+                src={project.picture}
+                alt={project.title}
+              />
+            </div>
+            <footer class='px-2 py-3 flex items-center justify-between lg:py-4 2xl:px-3 2xl:py-6'>
+              <h3 class='text-neutral-300 font-semibold text-xs lg:text-sm 2xl:text-lg'>
+                {project.title}
+              </h3>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke-width={2}
+                stroke='#ffffff'
+                class='w-4 h-4 -rotate-45 transition 2xl:w-6 2xl:h-6'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+              >
+                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                <path d='M5 12l14 0' />
+                <path d='M13 18l6 -6' />
+                <path d='M13 6l6 6' />
+              </svg>
+            </footer>
           </a>
         </div>
       ))
@@ -55,6 +83,33 @@ import { moreWorks } from '../consts'
     );
     outline: 1px solid rgba(242, 242, 242, 0.15);
     box-shadow: 0 10px 15px rgba(13, 13, 13, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+  .card-more-works > div img {
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+  }
+  .card-more-works:hover > div img {
+    transform: scale(1.1);
+  }
+  .card-more-works:hover > footer svg {
+    transform: rotate(0deg);
+  }
+  .glare-more-works {
+    z-index: 1;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(255, 255, 255, 0.4) 35%,
+      rgba(255, 255, 255, 0.6) 40%,
+      rgba(255, 255, 255, 0.4) 65%,
+      rgba(0, 0, 0, 0) 95%
+    );
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
   }
 
   @media only screen and (min-width: 1280px) {

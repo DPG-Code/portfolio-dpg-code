@@ -21,8 +21,10 @@ export default function WorksCard() {
   }
 
   return (
-    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px] lg:rounded-[36px] xl:p-3'>
-      <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 relative rounded-3xl xl:p-12 xl:gap-6 2xl:p-16'>
+    <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px] xl:p-3 xl:rounded-[36px]'>
+      <div className='glare-card'></div>
+      <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-4 rounded-[24px] xl:p-12 xl:gap-0 2xl:p-16 2xl:gap-6'>
+        <div className='glare-content'></div>
         <motion.header
           className='w-full flex flex-col items-center justify-center gap-6 sm:flex-row sm:justify-between'
           key={animationKey}
