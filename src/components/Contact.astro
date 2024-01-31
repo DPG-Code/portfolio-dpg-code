@@ -4,7 +4,7 @@ import { MEDIA_BUTTONS } from '../consts'
 
 <div
   id='contact'
-  class='px-6 overflow-hidden h-screen min-h-[600px] w-full flex flex-col items-center justify-center relative gap-2 sm:gap-4 sm:px-16 2xl:gap-10'
+  class='px-6 overflow-hidden h-screen min-h-[600px] w-full flex flex-col items-center justify-center relative gap-4 sm:gap-6 sm:px-16 2xl:gap-12'
 >
   <h2
     id='title-contact'
@@ -14,23 +14,24 @@ import { MEDIA_BUTTONS } from '../consts'
   </h2>
   <a
     href='mailto:prietogaviriadaniel@gmail.com'
-    class='icon-contact z-30 text-white font-normal text-sm flex items-center justify-center gap-3 sm:text-xl sm:gap-4 2xl:text-3xl 2xl:gap-6'
+    class='button-contact z-30 pl-4 pr-2 py-2 rounded-full text-white font-normal text-sm flex items-center justify-center gap-3 sm:text-xl sm:gap-4 xl:pl-6 xl:pr-3 xl:py-3 2xl:pl-12 2xl:pr-6 2xl:py-4 2xl:text-3xl 2xl:gap-6'
     aria-label='Send me a email'
   >
-    <p>Send an email</p>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke-width={2}
-      stroke='#F3D335'
-      class='w-4 h-4 2xl:w-7 2xl:h-7'
-    >
-      <path
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'></path>
-    </svg>
+    <p>send an email</p>
+    <div class='p-1 rounded-full xl:p-2 2xl:p-4'>
+      <svg
+        class='w-4 h-4 xl:w-5 xl:h-5 2xl:w-8 2xl:h-8'
+        xmlns='http://www.w3.org/2000/svg'
+        width='1em'
+        height='1em'
+        viewBox='0 0 24 24'
+      >
+        <path
+          fill='currentColor'
+          d='M16.15 13H5q-.425 0-.712-.288T4 12q0-.425.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z'
+        ></path>
+      </svg>
+    </div>
   </a>
   <div class='circle_contact-1 animate-pulse opacity-25'></div>
   <footer
@@ -60,9 +61,9 @@ import { MEDIA_BUTTONS } from '../consts'
 
 <style>
   .circle_contact-1 {
-    width: 220px;
-    height: 220px;
-    border: 0.9em solid #f3d335;
+    width: 260px;
+    height: 260px;
+    border: 1em solid #f3d335;
     border-radius: 100%;
     position: absolute;
   }
@@ -74,19 +75,30 @@ import { MEDIA_BUTTONS } from '../consts'
       0 0 30px rgba(0, 0, 0, 0.2);
   }
 
+  .button-contact {
+    background-color: rgba(242, 242, 242, 0.06);
+    transition: all 0.2s ease-in-out;
+  }
+  .button-contact > div {
+    background-color: rgba(242, 242, 242, 0.06);
+  }
+  .button-contact:hover {
+    background-color: rgba(242, 242, 242, 0.1);
+  }
+
   @media only screen and (min-width: 640px) {
     .circle_contact-1 {
-      width: 320px;
-      height: 320px;
-      border: 1.3em solid #f3d335;
+      width: 340px;
+      height: 340px;
+      border: 1.4em solid #f3d335;
     }
   }
 
   @media only screen and (min-width: 1536px) {
     .circle_contact-1 {
-      width: 460px;
-      height: 460px;
-      border: 1.7em solid #f3d335;
+      width: 560px;
+      height: 560px;
+      border: 1.9em solid #f3d335;
     }
   }
 </style>

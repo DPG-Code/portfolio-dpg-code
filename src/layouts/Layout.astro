@@ -56,7 +56,7 @@ const { title } = Astro.props
         background: transparent;
       }
       ::-webkit-scrollbar-thumb {
-        background: #f3d335;
+        background: rgba(242, 242, 242, 0.25);
       }
       body {
         font-family: 'Inter', sans-serif;
@@ -90,25 +90,12 @@ const { title } = Astro.props
         transition: all 0.2s ease-in-out;
       }
 
-      .icon-download svg,
-      .icon-contact svg,
       .icon-work svg {
         position: relative;
         transition: all 0.2s ease-in-out;
       }
-      .icon-download:hover svg,
-      .icon-contact:hover svg,
       .icon-work:hover svg {
         transform: translateX(6px);
-      }
-
-      .icon-download:hover p,
-      .icon-contact:hover p {
-        text-shadow:
-          0 5px 20px rgba(255, 255, 255, 0.2),
-          0 -5px 15px rgba(255, 255, 255, 0.1),
-          0 0 30px rgba(255, 255, 255, 0.2);
-        transition: 0.2s ease-out;
       }
     </style>
 

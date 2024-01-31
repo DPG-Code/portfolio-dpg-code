@@ -77,7 +77,7 @@ export default function WorksCard() {
           </section>
           <aside className='flex items-center justify-center sm:w-3/5 sm:justify-end 2xl:w-1/2'>
             <a
-              className='w-full flex items-center justify-center hover:scale-105 transition duration-200'
+              className='w-full min-h-[260px] flex items-center justify-center hover:scale-105 transition duration-200 xl:min-h-[320px] 2xl:min-h-[460px]'
               href={project.url}
               target='_blank'
             >
