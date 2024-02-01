@@ -42,7 +42,7 @@ import { MEDIA_BUTTONS } from '../consts'
     >
       {
         MEDIA_BUTTONS.map((li, index) => (
-          <li class='flex items-center justify-center gap-4 font-medium text-xs   sm:gap-6 sm:text-lg   lg:text-base 2xl:text-xl'>
+          <li class='flex items-center justify-center gap-4 font-medium text-xs   sm:gap-6 sm:text-lg   lg:text-base 2xl:text-2xl'>
             <a
               class='transition-fade hover:text-[#FFFFFF]'
               href={li.href}
@@ -61,8 +61,8 @@ import { MEDIA_BUTTONS } from '../consts'
 
 <style>
   .circle_contact-1 {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     border: 1em solid #f3d335;
     border-radius: 100%;
     position: absolute;
@@ -88,9 +88,9 @@ import { MEDIA_BUTTONS } from '../consts'
 
   @media only screen and (min-width: 640px) {
     .circle_contact-1 {
-      width: 340px;
-      height: 340px;
-      border: 1.4em solid #f3d335;
+      width: 320px;
+      height: 320px;
+      border: 1.2em solid #f3d335;
     }
   }
 
