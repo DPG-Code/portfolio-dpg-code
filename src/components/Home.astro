@@ -125,7 +125,7 @@ import { MEDIA_BUTTONS } from '../consts'
     transform: rotate(90deg);
   }
 
-  @media only screen and (max-width: 600px) {
+  @media (width <= 600px) {
     #title-home:after,
     #title-contact::before,
     #title-home:before,
@@ -133,17 +133,12 @@ import { MEDIA_BUTTONS } from '../consts'
       left: 0;
     }
   }
-
-  @media only screen and (min-width: 1024px) {
-    /* #title-home {
-      font-size: var(--font-size-xxl);
-    } */
+  @media (width >= 1024px) {
     #description-home {
       font-size: var(--font-size-base);
     }
   }
-
-  @media only screen and (min-width: 1536px) {
+  @media (width >= 1536px) {
     #title-home {
       font-size: var(--font-size-xxxl);
     }

@@ -34,7 +34,6 @@ const { title } = Astro.props
     />
   </head>
   <body class='bg-[#0D0D0D] relative'>
-    <!-- <div id='cursorMouse' class='max-[600px]:hidden'></div> -->
     <Header />
     <slot />
     <style is:global>
@@ -48,15 +47,8 @@ const { title } = Astro.props
 
       html {
         scroll-behavior: smooth;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: rgba(242, 242, 242, 0.25);
+        scrollbar-color: rgba(242, 242, 242, 0.25) #0d0d0d;
+        scrollbar-width: thin;
       }
       body {
         font-family: 'Inter', sans-serif;
@@ -66,26 +58,6 @@ const { title } = Astro.props
         transition: all 0.5s ease;
       }
 
-      /* #cursorMouse {
-        width: 320px;
-        height: 320px;
-        background: linear-gradient(
-          158.63deg,
-          #f3d335 -5.25%,
-          #f3d3358a 28.3%,
-          #f3d33517 108.22%
-        );
-        opacity: 10%;
-        filter: blur(35px);
-        border-radius: 100%;
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
-      } */
-
-      /* Animations */
       .transition-fade {
         transition: all 0.2s ease-in-out;
       }
@@ -98,18 +70,5 @@ const { title } = Astro.props
         transform: translateX(6px);
       }
     </style>
-
-    <script>
-      const cursor = document.getElementById('cursorMouse')
-
-      if (cursor) {
-        const cursorMove = (e: MouseEvent) => {
-          cursor.style.top = `${e.clientY}px`
-          cursor.style.left = `${e.clientX}px`
-        }
-
-        window.addEventListener('mousemove', cursorMove)
-      }
-    </script>
   </body>
 </html>

@@ -73,13 +73,13 @@ import { Image } from 'astro:assets'
     opacity: 1;
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media (width >= 1024px) {
     .navbar a:hover ~ .dot {
       transform: translateY(-26px);
       opacity: 1;
     }
   }
-  @media only screen and (min-width: 1536px) {
+  @media (width >= 1536px) {
     .navbar .dot {
       width: 8px;
       height: 8px;
