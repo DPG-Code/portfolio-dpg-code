@@ -26,7 +26,7 @@ export default function WorksCard() {
       <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-2 rounded-[24px] xl:p-12 xl:gap-0 2xl:p-16'>
         <div className='glare-content'></div>
         <motion.header
-          className='w-full flex flex-col items-center justify-center sm:flex-row sm:justify-between'
+          className='w-full flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0'
           key={animationKey}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -75,26 +75,16 @@ export default function WorksCard() {
               </svg>
             </a>
           </section>
-          <aside className='flex items-center justify-center sm:w-3/5 sm:justify-end 2xl:w-1/2'>
-            <a
-              className='w-full min-h-[180px] flex items-center justify-center hover:scale-105 transition duration-200 xl:min-h-[320px] 2xl:min-h-[460px]'
-              href={project.url}
-              target='_blank'
-            >
-              <motion.img
-                className='w-full h-auto drop-shadow-2xl lg:aspect-video'
-                width='960'
-                height='540'
-                src={project.img}
-                alt={project.title}
-                key={animationKey}
-                initial={{ x: '100%',opacity: 0 }}
-                animate={{ x: 0,opacity: 1 }}
-                exit={{ x: '-100%',opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              />
-            </a>
-          </aside>
+          <motion.img
+            className='w-full h-auto max-w-[960px] aspect-video drop-shadow-2xl sm:w-3/5 sm:justify-end 2xl:w-1/2'
+            src={project.img}
+            alt={project.title}
+            key={animationKey}
+            initial={{ x: '100%',opacity: 0 }}
+            animate={{ x: 0,opacity: 1 }}
+            exit={{ x: '-100%',opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          />
         </motion.header>
         <footer className='mb-6 w-full flex justify-center sm:justify-start xl:mb-0'>
           <motion.span

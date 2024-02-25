@@ -28,11 +28,9 @@ import { moreWorks } from '../consts'
               <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
               <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
             </header>
-            <div class='w-full h-auto rounded-lg overflow-hidden 2xl:rounded-xl'>
-              <Image
-                class='w-full h-auto object-cover'
-                width='320'
-                height='180'
+            <div class='rounded-lg overflow-hidden 2xl:rounded-xl'>
+              <img
+                class='w-full h-auto aspect-video'
                 src={project.picture}
                 alt={project.title}
               />
