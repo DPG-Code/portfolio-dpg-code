@@ -82,8 +82,14 @@ import { MEDIA_BUTTONS } from '../consts'
   .button-contact > div {
     background-color: rgba(242, 242, 242, 0.06);
   }
+  .button-contact > div svg {
+    transition: all 0.2s ease-in-out;
+  }
   .button-contact:hover {
     background-color: rgba(242, 242, 242, 0.1);
+  }
+  .button-contact:hover > div svg {
+    transform: rotate(-45deg);
   }
 
   @media (width >= 640px) {
