@@ -1,6 +1,7 @@
 # ⚡ Personal Portfolio
 
-![Project previe image](https://res.cloudinary.com/dhpxqwsym/image/upload/w_1280,h_720,c_fill/v1678870284/documentations/portfolio_jtcepx)
+![Project previe image](https://res.cloudinary.com/dhpxqwsym/image/upload/w_1280,h_720,c_fill/v1678870284/documentations/portfolio_ft2y71)
+![Second project previe image](https://res.cloudinary.com/dhpxqwsym/image/upload/w_1280,h_720,c_fill/v1678870284/documentations/portfolio-projects_ifdrka)
 
 ## 🚀 Project Structure
 
