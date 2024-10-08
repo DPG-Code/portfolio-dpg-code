@@ -23,6 +23,14 @@ const works = [
     url: 'https://infojobs-tracker.vercel.app/'
   },
   {
+    title: 'Gifree',
+    description:
+      'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
+    technologies: ['nextjs','reactjs','supabase','tailwind'],
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/gifree_iohqen',
+    url: 'https://gifree.vercel.app/'
+  },
+  {
     title: 'Xkcd comics',
     description:
       'Explore scraped XKCD comics effortlessly on this interactive web platform.',
@@ -44,14 +52,6 @@ const works = [
     ],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/notesapp_gm3tjr',
     url: 'https://notes-app-dpgcode.up.railway.app/'
-  },
-  {
-    title: 'Gifree',
-    description:
-      'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
-    technologies: ['nextjs','reactjs','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/gifree_iohqen',
-    url: 'https://gifree.vercel.app/'
   }
 ]
 

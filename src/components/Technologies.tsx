@@ -61,6 +61,13 @@ const ICON_TECH = {
       </svg>
     )
   },
+  supabase: () => {
+    return (
+      <svg className="w-4 h-4 lg:w-6 lg:h-6 2xl:w-10 2xl:h-10" viewBox="0 0 24 24" strokeWidth={1.2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z" />
+      </svg>
+    )
+  },
   cypress: () => {
     return (
       <svg className="w-6 h-6 lg:w-8 lg:h-8 2xl:w-12 2xl:h-12" viewBox="0 0 24 24" strokeWidth={1.2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
