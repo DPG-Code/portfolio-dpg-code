@@ -25,8 +25,8 @@ import { MEDIA_BUTTONS } from '../consts'
       class='max-w-xs font-medium text-center text-neutral-400 lg:max-w-3xl 2xl:max-w-none'
     >
       I am Daniel a creative developer with a passion for design and
-      development. <span class='text-white'>+3 years</span> of experience working
-      and deploying many projects and web apps visually stunning and technically
+      development. <span class='no-wrap text-white'>+3 years</span> of experience
+      working and deploying many projects and web apps visually stunning and technically
       proficient.
     </h2>
     <a
@@ -123,6 +123,10 @@ import { MEDIA_BUTTONS } from '../consts'
   }
   .button-home:hover > div svg {
     transform: rotate(-45deg);
+  }
+
+  .no-wrap {
+    white-space: nowrap;
   }
 
   @media (width <= 600px) {
