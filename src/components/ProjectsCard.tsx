@@ -1,44 +1,33 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { works } from '../consts.ts'
 import { Technologies } from './Technologies.tsx'
 import type { TechnologieType } from '../types'
 
+interface ProjectType {
+  title: string
+  description: string
+  technologies: string[]
+  img: string
+  url: string
+}
+
 export default function WorksCard() {
-  const [project,setProject] = useState(works[0])
-  const [animationKey,setAnimationKey] = useState(0)
-
-  const prevProject = () => {
-    if (works.indexOf(project) > 0) setProject(works[works.indexOf(project) - 1])
-    else setProject(works[works.length - 1])
-    setAnimationKey(animationKey + 1)
-  }
-
-  const nextProject = () => {
-    if (works.indexOf(project) === works.length - 1) setProject(works[0])
-    else setProject(works[works.indexOf(project) + 1])
-    setAnimationKey(animationKey + 1)
-  }
+  const project: ProjectType = works[0]
 
   return (
     <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px] xl:p-3 xl:rounded-[36px]'>
       <div className='glare-card'></div>
-      <div className='project-card-content p-6 py-12 w-full flex flex-col items-center justify-center gap-2 rounded-[24px] xl:p-12 xl:gap-0 2xl:p-16'>
+      <div className='project-card-content p-8 py-10 w-full flex flex-col items-center justify-center gap-6 rounded-[24px] xl:p-14 xl:gap-2 2xl:p-20'>
         <div className='glare-content'></div>
-        <motion.header
-          className='w-full flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0'
-          key={animationKey}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+        <header
+          className='w-full flex flex-col items-center justify-center gap-6 sm:flex-row sm:justify-between xl:gap-2'
         >
-          <section className='w-full text-white flex flex-col gap-6 sm:w-2/5 sm:justify-center lg:gap-6 2xl:gap-8 2xl:w-1/2'>
+          <section className='w-full text-white flex flex-col gap-6 sm:w-1/2 sm:justify-center lg:gap-6 2xl:gap-8'>
             <header>
-              <h3 className='mb-4 font-bold text-2xl relative lg:mb-5 lg:text-4xl 2xl:mb-7 2xl:text-7xl'>
+              <h3 className='mb-4 font-bold text-2xl relative lg:mb-5 lg:text-3xl 2xl:mb-7 2xl:text-7xl'>
                 {project.title.toUpperCase()}
               </h3>
-              <p className='max-w-[280px] font-normal text-xs text-neutral-400 lg:max-w-[620px] lg:text-lg 2xl:text-3xl'>
+              <p className='max-w-[280px] font-normal text-xs text-neutral-400 lg:max-w-[460px] lg:text-lg 2xl:max-w-[620px] 2xl:text-3xl'>
                 {project.description}
               </p>
             </header>
@@ -75,76 +64,19 @@ export default function WorksCard() {
               </svg>
             </a>
           </section>
-          <motion.img
-            className='w-full h-auto max-w-[960px] aspect-video drop-shadow-2xl sm:w-3/5 sm:justify-end 2xl:w-1/2'
+          <img
+            className='w-full h-auto max-w-[960px] aspect-video drop-shadow-2xl rounded-lg sm:w-1/2 sm:justify-end xl:rounded-xl 2xl:rounded-3xl'
             src={project.img}
             alt={project.title}
-            key={animationKey}
-            initial={{ x: '100%',opacity: 0 }}
-            animate={{ x: 0,opacity: 1 }}
-            exit={{ x: '-100%',opacity: 0 }}
-            transition={{ duration: 0.5 }}
           />
-        </motion.header>
-        <footer className='mb-6 w-full flex justify-center sm:justify-start xl:mb-0'>
-          <motion.span
-            className='text-transparent titleEffect font-extrabold text-7xl lg:text-9xl 2xl:text-[172px]'
-            key={animationKey}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+        </header>
+        <footer className='w-full flex justify-center sm:justify-start'>
+          <span
+            className='text-transparent titleEffect font-extrabold text-5xl lg:text-9xl 2xl:text-[172px]'
           >
-            {works.indexOf(project) < 10 && '0'}
-            {works.indexOf(project) + 1}
-          </motion.span>
+            01
+          </span>
         </footer>
-        <div className='w-full flex items-center justify-center gap-6 text-neutral-500 xl:gap-12'>
-          <button
-            id='prev-project'
-            data-testid='prev-project'
-            aria-label='View previous project'
-            onClick={prevProject}
-            className='hover:text-white hover:scale-110 transition'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={1}
-              stroke='currentColor'
-              className='w-10 h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-              />
-            </svg>
-          </button>
-          <button
-            id='next-project'
-            data-testid='next-project'
-            aria-label='View next project'
-            onClick={nextProject}
-            className='hover:text-white hover:scale-110 transition'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={1}
-              stroke='currentColor'
-              className='w-10 h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-              />
-            </svg>
-          </button>
-        </div>
       </div>
     </article>
   )

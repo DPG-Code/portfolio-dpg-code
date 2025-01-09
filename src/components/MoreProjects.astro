@@ -1,60 +1,41 @@
 ---
-import { Image } from 'astro:assets'
 import { moreWorks } from '../consts'
+
+interface Project {
+  title: string
+  description: string
+  technologies: string[]
+  img: string
+  url: string
+}
+
+const bentoItemSpace: Record<string, string> = {
+  first: 'bento-item-secondary',
+  second: 'bento-item-main',
+  third: 'bento-item-secondary',
+  fourth: 'bento-item-vertical',
+  fifth: 'bento-item-vertical',
+  sixth: 'bento-item-secondary'
+}
 ---
 
-<article class='pt-16 px-6 flex flex-col gap-12 xl:gap-20 xl:p-36'>
+<article
+  class='px-6 flex flex-col gap-12 sm:px-12 xl:gap-20 xl:px-36 xl:pb-36 2xl:px-56 2xl:pb-56'
+>
   <div class='w-full h-[2px] bg-neutral-800'></div>
-  <header class='flex items-center justify-start gap-4 xl:gap-6'>
-    <div class='dot-title'></div>
-    <h2 class='w-full z-40 font-semibold text-lg text-neutral-400 2xl:text-2xl'>
-      MORE PROJECTS
-    </h2>
-  </header>
-  <section
-    class='w-full grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 xl:grid-cols-4 xl:gap-12'
-  >
+  <section class='w-full bento-grid'>
     {
-      moreWorks.map((project) => (
-        <div class='w-full h-auto flex'>
-          <a
-            href={project.url}
-            target='_blank'
-            class='card-more-works m-auto px-1 w-full max-w-[272px] rounded-lg sm:max-w-md 2xl:px-2 2xl:rounded-xl'
-          >
+      moreWorks.map((project: Project, i: number) => (
+        <div
+          class={`${bentoItemSpace[Object.keys(bentoItemSpace)[i]]} bento-project-card flex overflow-hidden rounded-lg md:rounded-xl`}
+        >
+          <a href={project.url} target='_blank' class='w-full h-full'>
             <div class='glare-more-works' />
-            <header class='px-2 py-[6px] flex items-center gap-1 2xl:px-3 2xl:py-2'>
-              <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
-              <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
-              <div class='w-[6px] h-[6px] bg-neutral-700 rounded-full 2xl:w-2 2xl:h-2' />
-            </header>
-            <div class='rounded-lg overflow-hidden 2xl:rounded-xl'>
-              <img
-                class='w-full h-auto aspect-video'
-                src={project.picture}
-                alt={project.title}
-              />
-            </div>
-            <footer class='px-2 py-3 flex items-center justify-between lg:py-4 2xl:px-3 2xl:py-6'>
-              <h3 class='text-neutral-300 font-semibold text-xs lg:text-sm 2xl:text-xl'>
-                {project.title}
-              </h3>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke-width={2}
-                stroke='#ffffff'
-                class='w-4 h-4 -rotate-45 transition 2xl:w-6 2xl:h-6'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-              >
-                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                <path d='M5 12l14 0' />
-                <path d='M13 18l6 -6' />
-                <path d='M13 6l6 6' />
-              </svg>
-            </footer>
+            <img
+              class='w-full h-full object-contain'
+              src={project.img}
+              alt={project.title}
+            />
           </a>
         </div>
       ))
@@ -63,35 +44,47 @@ import { moreWorks } from '../consts'
 </article>
 
 <style>
-  .dot-title {
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #ffffff;
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(auto, 148px));
+    gap: 1.2rem;
+  }
+  .bento-item-main {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .bento-item-vertical {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .bento-item-secondary {
+    grid-column: span 1;
+    grid-row: span 1;
   }
 
-  .card-more-works {
-    backdrop-filter: none;
+  .bento-project-card {
     outline-offset: -1px;
     background-image: radial-gradient(
-      circle farthest-side at 50% 0,
-      rgba(242, 242, 242, 0.2),
-      rgba(13, 13, 13, 0.5)
+      circle at 50% 0,
+      rgba(255, 255, 255, 0.075),
+      rgba(13, 13, 13)
     );
-    outline: 1px solid rgba(242, 242, 242, 0.15);
-    box-shadow: 0 10px 15px rgba(13, 13, 13, 0.5);
+    outline: 1px solid rgba(242, 242, 242, 0.06);
+    box-shadow: 0 20px 25px rgba(13, 13, 13, 0.5);
+  }
+  .bento-project-card:hover {
+    background-image: radial-gradient(
+      circle at 50% 0,
+      rgba(255, 255, 255, 0.15),
+      rgba(13, 13, 13)
+    );
+  }
+  .bento-project-card a img {
     transition: all 0.2s ease-in-out;
   }
-  .card-more-works > div img {
-    transform: scale(1);
-    transition: all 0.2s ease-in-out;
-  }
-  .card-more-works:hover > div img {
+  .bento-project-card:hover a img {
     transform: scale(1.1);
-  }
-  .card-more-works:hover > footer svg {
-    transform: rotate(0deg);
   }
   .glare-more-works {
     z-index: 1;
@@ -110,10 +103,29 @@ import { moreWorks } from '../consts'
     right: 0%;
   }
 
-  @media (width >= 1280px) {
-    .dot-title {
-      width: 14px;
-      height: 14px;
+  @media (width >= 1080px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, minmax(auto, 200px));
+      gap: 2rem;
+    }
+    .bento-item-main {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    .bento-item-vertical {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    .bento-item-secondary {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  @media (width >= 1560px) {
+    .bento-grid {
+      grid-template-rows: repeat(3, minmax(244px, auto));
     }
   }
 </style>

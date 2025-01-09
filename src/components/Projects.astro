@@ -4,7 +4,7 @@ import ProjectsCard from './ProjectsCard'
 
 <section
   id='projects'
-  class='py-16 px-6 flex flex-col gap-12 xl:gap-20 xl:p-36'
+  class='py-12 px-6 flex flex-col gap-12 xl:gap-20 sm:px-12 xl:px-36 xl:pt-36 xl:pb-20 2xl:px-56'
 >
   <div class='w-full h-[2px] bg-neutral-800'></div>
   <header class='flex items-center justify-start gap-4 xl:gap-6'>
@@ -101,9 +101,12 @@ import ProjectsCard from './ProjectsCard'
     right: 0%;
   }
 
-  #prev-project,
-  #next-project {
-    -webkit-tap-highlight-color: transparent;
+  .icon-work svg {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  .icon-work:hover svg {
+    transform: translateX(6px);
   }
 
   @media (width >= 1024px) {

@@ -4,39 +4,48 @@ const works = [
     description:
       'Real-time chat web application developed in Next.js for seamless communication.',
     technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress','pusher'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/chatverse_k4salc',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/chatverse_bsirpv',
     url: 'https://chat-verse-azure.vercel.app/'
+  }
+]
+
+const moreWorks = [
+  {
+    title: 'JobsTracker',
+    description: 'Infojobs hackathon finalist, a tool to gather job position information effectively.',
+    technologies: ['nextjs','reactjs','tailwind'],
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/jobstracker_kkci4a',
+    url: 'https://infojobs-tracker.vercel.app/'
   },
   {
     title: 'ShoppyFree',
     description:
       'Next.js-based e-commerce platform packed with feature-rich functionalities.',
     technologies: ['nextjs','mongodb','mongoose','tailwind','stripe'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/shoppyfree_otpfco',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/shoppyfree_anvyag',
     url: 'https://shoppyfree.vercel.app/'
   },
   {
-    title: 'JobsTracker',
-    description: 'Infojobs hackathon finalist, a tool to gather job position information effectively.',
-    technologies: ['nextjs','reactjs','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/jobstracker_mlpo6y',
-    url: 'https://infojobs-tracker.vercel.app/'
+    title: 'WriteRight',
+    description: 'English text correction app powered by AI.',
+    technologies: ['Astro','Svelte','Cohere AI','Tailwind'],
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1687790918/works/moreworks/bento/writeright_l8vejp',
+    url: 'https://github.com/DPG-Code/write-right'
   },
   {
     title: 'Gifree',
     description:
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
     technologies: ['nextjs','reactjs','supabase','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/gifree_iohqen',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/gifree_uoautd',
     url: 'https://gifree.vercel.app/'
   },
   {
-    title: 'Xkcd comics',
-    description:
-      'Explore scraped XKCD comics effortlessly on this interactive web platform.',
-    technologies: ['nextjs','reactjs','tailwind','algolia'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/xkcd_v2wluj',
-    url: 'https://xkcd-app-taupe.vercel.app/'
+    title: 'Cleanbg',
+    description: 'Quickly remove image backgrounds with our app.',
+    technologies: ['Svelte','Cloudinary','Tailwind'],
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1687790918/works/moreworks/bento/cleanbg_mokqhi',
+    url: 'https://clean-bg.vercel.app/'
   },
   {
     title: 'Notes app',
@@ -50,61 +59,8 @@ const works = [
       'tailwind',
       'sentry'
     ],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/portfolio/notesapp_gm3tjr',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/notesapp_uunbtw',
     url: 'https://notes-app-dpgcode.up.railway.app/'
-  }
-]
-
-const moreWorks = [
-  {
-    title: 'Weather app',
-    description:
-      'Stay informed about weather conditions with this Svelte-powered web application.',
-    picture: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/weather_t3ciyl',
-    url: 'https://weather-app-dpg.vercel.app/',
-    tech: ['SVELTE KIT','SVELTE']
-  },
-  {
-    title: 'Cleanbg',
-    description: 'Quickly remove image backgrounds with our app.',
-    picture:
-      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/cleanbg_keregm',
-    url: 'https://clean-bg.vercel.app/',
-    tech: ['Svelte','Cloudinary','Tailwind']
-  },
-  {
-    title: 'WriteRight',
-    description: 'English text correction app powered by AI.',
-    picture:
-      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/writeright_vuq4vr',
-    url: 'https://github.com/DPG-Code/write-right',
-    tech: ['Astro','Svelte','Cohere AI','Tailwind']
-  },
-  {
-    title: 'EricLostie',
-    description: 'Fangames website.',
-    picture:
-      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/ericlostie_vlz0vw',
-    url: 'https://ericlostie.vercel.app/',
-    tech: ['Astro','Tailwind']
-  },
-  {
-    title: 'Freegames',
-    description:
-      'Discover your next favorite game - my project is a comprehensive search engine for free video games across all platforms.',
-    picture:
-      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/games_xwehp8',
-    url: 'https://dpg-games.netlify.app/',
-    tech: ['React.JS','Wouter','Vite']
-  },
-  {
-    title: 'Unlimited BBQ',
-    description:
-      'Landing page for a colombian BBQ Restaurant.',
-    picture:
-      'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_180,q_100,w_320/v1687790918/works/portfolio/moreworks/unlimitedbbq_qeavnn',
-    url: 'https://unlimited-bbq.netlify.app/',
-    tech: ['Html','Css','Javascript']
   }
 ]
 
