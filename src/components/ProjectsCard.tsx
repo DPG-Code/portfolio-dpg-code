@@ -17,7 +17,7 @@ export default function WorksCard() {
   return (
     <article className='project-card p-2 flex flex-col overflow-hidden rounded-[32px] xl:p-3 xl:rounded-[36px]'>
       <div className='glare-card'></div>
-      <div className='project-card-content p-8 py-10 w-full flex flex-col items-center justify-center gap-6 rounded-[24px] xl:p-14 xl:gap-2 2xl:p-20'>
+      <div className='project-card-content p-8 py-10 w-full flex flex-col items-center justify-center gap-6 rounded-[24px] xl:p-14 2xl:p-20'>
         <div className='glare-content'></div>
         <header
           className='w-full flex flex-col items-center justify-center gap-6 sm:flex-row sm:justify-between xl:gap-2'
@@ -27,7 +27,7 @@ export default function WorksCard() {
               <h3 className='mb-4 font-bold text-2xl relative lg:mb-5 lg:text-3xl 2xl:mb-7 2xl:text-7xl'>
                 {project.title.toUpperCase()}
               </h3>
-              <p className='max-w-[280px] font-normal text-xs text-neutral-400 lg:max-w-[460px] lg:text-lg 2xl:max-w-[620px] 2xl:text-3xl'>
+              <p className='max-w-[280px] font-normal text-xs text-neutral-400 lg:max-w-[440px] lg:text-lg 2xl:max-w-[620px] 2xl:text-2xl'>
                 {project.description}
               </p>
             </header>
