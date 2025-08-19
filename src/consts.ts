@@ -60,7 +60,7 @@ const moreWorks = [
       'sentry'
     ],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/notesapp_uunbtw',
-    url: 'https://notes-app-dpgcode.up.railway.app/'
+    url: 'https://github.com/DPG-Code/notes-app'
   }
 ]
 
