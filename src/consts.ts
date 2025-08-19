@@ -5,7 +5,8 @@ const works = [
       'Real-time chat web application developed in Next.js for seamless communication.',
     technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress','pusher'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/chatverse_bsirpv',
-    url: 'https://chat-verse-azure.vercel.app/'
+    url: 'https://chat-verse-azure.vercel.app/',
+    live: true
   }
 ]
 
@@ -15,7 +16,8 @@ const moreWorks = [
     description: 'Infojobs hackathon finalist, a tool to gather job position information effectively.',
     technologies: ['nextjs','reactjs','tailwind'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/jobstracker_kkci4a',
-    url: 'https://infojobs-tracker.vercel.app/'
+    url: 'https://infojobs-tracker.vercel.app/',
+    live: true
   },
   {
     title: 'ShoppyFree',
@@ -23,14 +25,16 @@ const moreWorks = [
       'Next.js-based e-commerce platform packed with feature-rich functionalities.',
     technologies: ['nextjs','mongodb','mongoose','tailwind','stripe'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/shoppyfree_anvyag',
-    url: 'https://shoppyfree.vercel.app/'
+    url: 'https://shoppyfree.vercel.app/',
+    live: true
   },
   {
     title: 'WriteRight',
     description: 'English text correction app powered by AI.',
     technologies: ['Astro','Svelte','Cohere AI','Tailwind'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1687790918/works/moreworks/bento/writeright_l8vejp',
-    url: 'https://github.com/DPG-Code/write-right'
+    url: 'https://github.com/DPG-Code/write-right',
+    live: false
   },
   {
     title: 'Gifree',
@@ -38,14 +42,16 @@ const moreWorks = [
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
     technologies: ['nextjs','reactjs','supabase','tailwind'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/gifree_uoautd',
-    url: 'https://gifree.vercel.app/'
+    url: 'https://gifree.vercel.app/',
+    live: true
   },
   {
     title: 'Cleanbg',
     description: 'Quickly remove image backgrounds with our app.',
     technologies: ['Svelte','Cloudinary','Tailwind'],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1687790918/works/moreworks/bento/cleanbg_mokqhi',
-    url: 'https://clean-bg.vercel.app/'
+    url: 'https://clean-bg.vercel.app/',
+    live: true
   },
   {
     title: 'Notes app',
@@ -60,7 +66,8 @@ const moreWorks = [
       'sentry'
     ],
     img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/notesapp_uunbtw',
-    url: 'https://github.com/DPG-Code/notes-app'
+    url: 'https://github.com/DPG-Code/notes-app',
+    live: false
   }
 ]
 

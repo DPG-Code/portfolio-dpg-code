@@ -7,6 +7,7 @@ interface Project {
   technologies: string[]
   img: string
   url: string
+  live: boolean
 }
 
 const bentoItemSpace: Record<string, string> = {
@@ -26,18 +27,26 @@ const bentoItemSpace: Record<string, string> = {
   <section class='w-full bento-grid'>
     {
       moreWorks.map((project: Project, i: number) => (
-        <div
-          class={`${bentoItemSpace[Object.keys(bentoItemSpace)[i]]} bento-project-card flex overflow-hidden rounded-lg md:rounded-xl`}
+        <picture
+          class={`${bentoItemSpace[Object.keys(bentoItemSpace)[i]]} relative flex`}
         >
-          <a href={project.url} target='_blank' class='w-full h-full'>
-            <div class='glare-more-works' />
-            <img
-              class='w-full h-full object-contain'
-              src={project.img}
-              alt={project.title}
-            />
-          </a>
-        </div>
+          <div class='bento-project-card w-full h-full overflow-hidden rounded-lg md:rounded-xl'>
+            <a href={project.url} target='_blank' class='w-full h-full'>
+              <div class='glare-more-works' />
+              <img
+                class='w-full h-full object-contain'
+                src={project.img}
+                alt={project.title}
+              />
+            </a>
+          </div>
+          {project.live && (
+            <span class='absolute -top-1 -right-1 flex w-4 h-4 2xl:w-6 2xl:h-6'>
+              <span class='absolute h-full w-full animate-ping rounded-full bg-[#F3D335] opacity-75' />
+              <span class='absolute h-full w-full rounded-full bg-[#F3D335]' />
+            </span>
+          )}
+        </picture>
       ))
     }
   </section>
