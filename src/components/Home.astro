@@ -4,7 +4,7 @@ import { MEDIA_BUTTONS } from '../consts'
 
 <main
   id='home'
-  class='px-6 h-dvh min-h-[700px] w-full flex flex-col items-center justify-center relative sm:px-16 lg:flex-row lg:px-24 xl:h-screen 2xl:px-36'
+  class='px-6 min-h-[700px] w-full flex flex-col items-center justify-center relative sm:px-16 lg:flex-row lg:px-24 2xl:px-36'
 >
   <section
     class='w-full max-w-6xl flex flex-col items-center justify-center gap-12 xl:gap-16'
@@ -74,6 +74,10 @@ import { MEDIA_BUTTONS } from '../consts'
 </main>
 
 <style is:global>
+  #home {
+    height: 100dvh;
+  }
+
   #title-home:after,
   #title-contact::before,
   #title-home:before,
