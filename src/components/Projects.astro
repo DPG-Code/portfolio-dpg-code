@@ -1,5 +1,5 @@
 ---
-import ProjectsCard from './ProjectsCard'
+import ProjectsCard from '@/components/ProjectsCard.astro'
 ---
 
 <section
@@ -13,7 +13,7 @@ import ProjectsCard from './ProjectsCard'
       PROJECTS
     </h2>
   </header>
-  <ProjectsCard client:only />
+  <ProjectsCard />
 </section>
 
 <style is:global>

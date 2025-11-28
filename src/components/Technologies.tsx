@@ -1,4 +1,4 @@
-import type { TechnologieType } from "../types"
+import type { TechnologieType } from "@/types"
 
 const ICON_TECH = {
   nextjs: () => {

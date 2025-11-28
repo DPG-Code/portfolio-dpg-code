@@ -1,75 +1,54 @@
 ---
-import { MEDIA_BUTTONS } from '../consts'
+import SocialMedia from './SocialMedia.astro'
 ---
 
 <main
   id='home'
-  class='px-6 min-h-[700px] w-full flex flex-col items-center justify-center relative sm:px-16 lg:flex-row lg:px-24 2xl:px-36'
+  class='min-h-[700px] w-full flex flex-col items-center justify-center gap-12 relative'
 >
-  <section
-    class='w-full max-w-6xl flex flex-col items-center justify-center gap-12 xl:gap-16'
+  <header
+    class='w-full max-w-6xl flex flex-col items-center justify-center gap-8 2xl:gap-12'
   >
     <h1
       id='title-home'
-      class='font-bold text-[#F3D335] text-center leading-tight flex flex-col gap-2'
+      class='font-bold text-[#F3D335] text-center leading-tight flex flex-col gap-1 lg:gap-2'
     >
       Front-end developer{' '}
       <span
-        class='font-medium text-2xl text-[#FFFFFF] l g:text-3xl 2xl:text-5xl'
+        class='font-medium text-xl text-[#FFFFFF] l g:text-3xl 2xl:text-5xl'
       >
         & graphic designer.
       </span>
     </h1>
     <h2
       id='description-home'
-      class='max-w-xs font-medium text-center text-neutral-400 lg:max-w-3xl 2xl:max-w-none'
+      class='max-w-xs font-normal text-center text-neutral-400 lg:max-w-3xl 2xl:max-w-none'
     >
-      I am Daniel a creative developer with a passion for design and
-      development. <span class='no-wrap text-white'>+3 years</span> of experience
-      working and deploying many projects and web apps visually stunning and technically
-      proficient.
+      <span class='block'>
+        I am Daniel a creative developer with a passion for design and
+        development.
+      </span>
+      <span class='text-white'>+3 years</span> experience working and deploying many
+      projects and web apps visually stunning and technically proficient.
     </h2>
-    <a
-      href='https://drive.google.com/file/d/1GhkxLC1_qe76ABIC_QoqSiNp7aSt3UEQ/view'
-      target='_blank'
-      class='button-home pl-6 pr-3 py-2 rounded-full text-white font-semibold text-[10px] flex items-center justify-center gap-3 xs:text-sm sm:text-base sm:gap-4 xl:pl-8 xl:pr-4 xl:py-3 2xl:pl-10 2xl:pr-5 2xl:text-xl 2xl:gap-8'
+  </header>
+  <footer class='w-full flex flex-col items-center justify-center gap-8'>
+    <div
+      class='inline-flex items-center px-3 py-1.5 gap-2 rounded-md box-border 2xl:px-4 2xl:gap-3'
     >
-      <p>VIEW RESUME</p>
-      <div class='p-1 rounded-full xl:p-2 2xl:p-4'>
-        <svg
-          class='w-4 h-4 xl:w-5 xl:h-5 2xl:w-7 2xl:h-7'
-          xmlns='http://www.w3.org/2000/svg'
-          width='1em'
-          height='1em'
-          viewBox='0 0 24 24'
-        >
-          <path
-            fill='currentColor'
-            d='M16.15 13H5q-.425 0-.712-.288T4 12q0-.425.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z'
-          ></path>
-        </svg>
-      </div>
-    </a>
-  </section>
-  <footer class='px-6 w-full absolute bottom-0 sm:px-16 lg:px-24 2xl:px-36'>
-    <ul
-      class='w-full h-16 font-medium text-xs text-neutral-400 flex items-start justify-center gap-3 lg:h-24 lg:text-base 2xl:h-32 2xl:text-xl'
-    >
-      {
-        MEDIA_BUTTONS.map((li, index) => (
-          <li class='flex items-center justify-center gap-3'>
-            <a
-              class='transition-fade hover:text-[#FFFFFF]'
-              href={li.href}
-              target='_blank'
-            >
-              {li.label}
-            </a>
-            {index < MEDIA_BUTTONS.length - 1 && <span>/</span>}
-          </li>
-        ))
-      }
-    </ul>
+      <span class='relative flex items-center h-2 w-2 2xl:h-3 2xl:w-3'>
+        <span
+          class='absolute inline-flex h-full w-full rounded-full bg-[#F3D335]'
+        ></span>
+        <span
+          class='absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 bg-[#F3D335]'
+        ></span>
+      </span>
+      <p class='text-xs font-semibold text-white 2xl:text-base'>
+        Available for new projects
+      </p>
+    </div>
+    <SocialMedia />
   </footer>
 </main>
 
@@ -110,27 +89,6 @@ import { MEDIA_BUTTONS } from '../consts'
   }
   #description-home {
     font-size: var(--font-size-sm);
-  }
-
-  .button-home {
-    background-color: rgba(242, 242, 242, 0.06);
-    transition: all 0.2s ease-in-out;
-  }
-  .button-home > div {
-    background-color: rgba(242, 242, 242, 0.06);
-  }
-  .button-home > div svg {
-    transition: all 0.2s ease-in-out;
-  }
-  .button-home:hover {
-    background-color: rgba(242, 242, 242, 0.1);
-  }
-  .button-home:hover > div svg {
-    transform: rotate(-45deg);
-  }
-
-  .no-wrap {
-    white-space: nowrap;
   }
 
   @media (width <= 600px) {

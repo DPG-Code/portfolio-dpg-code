@@ -36,7 +36,6 @@ import { Image } from 'astro:assets'
         >
           PROJECTS</a
         >
-        <div class='dot absolute bottom-0'></div>
       </li>
       <li class='h-full flex items-center justify-center relative'>
         <a
@@ -46,7 +45,6 @@ import { Image } from 'astro:assets'
         >
           CONTACT</a
         >
-        <div class='dot absolute bottom-0'></div>
       </li>
     </ul>
   </nav>
@@ -56,37 +54,8 @@ import { Image } from 'astro:assets'
   .navbar a {
     transition: all 0.2s ease-in-out;
   }
-  .navbar .dot {
-    width: 6px;
-    height: 6px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #ffffff;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
+
   .navbar a:hover {
     color: #ffffff;
-  }
-  .navbar a:hover ~ .dot {
-    transform: translateY(-12px);
-    opacity: 1;
-  }
-
-  @media (width >= 1024px) {
-    .navbar a:hover ~ .dot {
-      transform: translateY(-26px);
-      opacity: 1;
-    }
-  }
-  @media (width >= 1536px) {
-    .navbar .dot {
-      width: 8px;
-      height: 8px;
-    }
-    .navbar a:hover ~ .dot {
-      transform: translateY(-36px);
-      opacity: 1;
-    }
   }
 </style>
