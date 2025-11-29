@@ -4,7 +4,6 @@ import { moreWorks } from '@/consts'
 interface Project {
   title: string
   description: string
-  technologies: string[]
   img: string
   url: string
 }
@@ -30,13 +29,19 @@ const bentoItemSpace: Record<string, string> = {
           class={`${bentoItemSpace[Object.keys(bentoItemSpace)[i]]} relative flex`}
         >
           <div class='bento-project-card w-full h-full overflow-hidden rounded-lg md:rounded-xl'>
-            <a href={project.url} target='_blank' class='w-full h-full'>
-              <div class='glare-more-works' />
+            <a
+              href={project.url}
+              target='_blank'
+              class='relative w-full h-full'
+            >
               <img
-                class='w-full h-full object-contain'
+                class='w-full h-full object-cover grayscale brightness-[0.2] hover:grayscale-0 hover:brightness-100'
                 src={project.img}
                 alt={project.title}
               />
+              <p class='absolute bottom-4 left-4 w-full text-xs text-white text-left font-medium lg:text-lg lg:bottom-5 lg:left-5 2xl:text-3xl 2xl:bottom-8 2xl:left-9'>
+                {project.title}
+              </p>
             </a>
           </div>
         </picture>
@@ -87,22 +92,6 @@ const bentoItemSpace: Record<string, string> = {
   }
   .bento-project-card:hover a img {
     transform: scale(1.1);
-  }
-  .glare-more-works {
-    z-index: 1;
-    height: 1px;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0) 5%,
-      rgba(255, 255, 255, 0.4) 35%,
-      rgba(255, 255, 255, 0.6) 40%,
-      rgba(255, 255, 255, 0.4) 65%,
-      rgba(0, 0, 0, 0) 95%
-    );
-    top: 0%;
-    bottom: auto;
-    left: 0%;
-    right: 0%;
   }
 
   @media (width >= 1080px) {

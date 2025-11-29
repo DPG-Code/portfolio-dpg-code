@@ -11,53 +11,40 @@ const moreWorks = [
   {
     title: 'JobsTracker',
     description: 'Infojobs hackathon finalist, a tool to gather job position information effectively.',
-    technologies: ['nextjs','reactjs','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/jobstracker_kkci4a',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/v1764412375/works/moreworks/bento/png/jobstracker_l47mv0.webp',
     url: 'https://infojobs-tracker.vercel.app/'
   },
   {
     title: 'ShoppyFree',
     description:
       'Next.js-based e-commerce platform packed with feature-rich functionalities.',
-    technologies: ['nextjs','mongodb','mongoose','tailwind','stripe'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/shoppyfree_anvyag',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/v1764412374/works/moreworks/bento/png/shoppyfree_oj6vmi.webp',
     url: 'https://shoppyfree.vercel.app/'
   },
   {
     title: 'WriteRight',
     description: 'English text correction app powered by AI.',
-    technologies: ['Astro','Svelte','Cohere AI','Tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1687790918/works/moreworks/bento/writeright_l8vejp',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/v1764412375/works/moreworks/bento/png/writeright_k8owmh.webp',
     url: 'https://github.com/DPG-Code/write-right'
   },
   {
     title: 'Gifree',
     description:
       'Enjoy a user-friendly GIF platform with user profiles and favoriting features.',
-    technologies: ['nextjs','reactjs','supabase','tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/gifree_uoautd',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/v1764412380/works/moreworks/bento/png/gifree_huz8df.webp',
     url: 'https://gifree.vercel.app/'
   },
   {
     title: 'Cleanbg',
     description: 'Quickly remove image backgrounds with our app.',
-    technologies: ['Svelte','Cloudinary','Tailwind'],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1687790918/works/moreworks/bento/cleanbg_mokqhi',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/v1764412374/works/moreworks/bento/png/cleanbg_gfbtp0.webp',
     url: 'https://clean-bg.vercel.app/'
   },
   {
     title: 'Notes app',
     description:
       'User-friendly note-taking web app powered by MongoDB for data storage.',
-    technologies: [
-      'reactjs',
-      'nodejs',
-      'mongodb',
-      'express',
-      'tailwind',
-      'sentry'
-    ],
-    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,q_100/v1677061650/works/moreworks/bento/notesapp_uunbtw',
+    img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/v1764412375/works/moreworks/bento/png/notesapp_p5cdji.webp',
     url: 'https://github.com/DPG-Code/notes-app'
   }
 ]
