@@ -11,17 +11,18 @@ import { Image } from 'astro:assets'
         width='40'
         height='40'
         src='/assets/logo.webp'
-        class='logo w-auto h-6 invert aspect-square xl:h-8 2xl:h-12'
+        class='logo w-auto h-5 invert aspect-square xl:h-8 2xl:h-12'
         alt='logo'
         aria-label='Reload and go to home page'
         fetch-priority='high'
+        tabindex='1'
       />
       <div class='hidden xl:flex flex-col justify-center font-semibold'>
         <h2 class='text-white font-medium text-base 2xl:text-xl'>
-          Daniel Prieto Gaviria
+          DANIEL PRIETO GAVIRIA
         </h2>
         <p class='text-neutral-500 font-medium text-sm 2xl:text-xl'>
-          Frontend Developer & Designer
+          Developer & Designer
         </p>
       </div>
     </a>
@@ -30,18 +31,20 @@ import { Image } from 'astro:assets'
     >
       <li class='h-full flex items-center justify-center relative'>
         <a
-          class='text-neutral-500 font-medium'
+          class='text-white font-medium'
           href='#projects'
           aria-label='Go to section projects'
+          tabindex='2'
         >
           PROJECTS</a
         >
       </li>
       <li class='h-full flex items-center justify-center relative'>
         <a
-          class='text-neutral-500 font-medium'
+          class='text-white font-medium'
           href='#contact'
           aria-label='Go to section contact'
+          tabindex='3'
         >
           CONTACT</a
         >
@@ -49,13 +52,3 @@ import { Image } from 'astro:assets'
     </ul>
   </nav>
 </header>
-
-<style>
-  .navbar a {
-    transition: all 0.2s ease-in-out;
-  }
-
-  .navbar a:hover {
-    color: #ffffff;
-  }
-</style>
