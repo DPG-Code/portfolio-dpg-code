@@ -6,7 +6,7 @@ import ProjectsCard from '@/components/ProjectsCard.astro'
   id='projects'
   class='py-12 px-6 flex flex-col gap-12 xl:gap-20 sm:px-12 xl:px-36 xl:pt-36 xl:pb-20 2xl:px-56'
 >
-  <div class='w-full h-[2px] bg-neutral-800'></div>
+  <div class='w-full h-[1px] bg-neutral-800'></div>
   <header class='flex items-center justify-start gap-4 xl:gap-6'>
     <div class='dot-title'></div>
     <h2 class='w-full z-40 font-semibold text-lg text-neutral-400 2xl:text-2xl'>
@@ -51,9 +51,9 @@ import ProjectsCard from '@/components/ProjectsCard.astro'
 
   .project-card {
     outline-offset: -1px;
-    background-color: rgba(242, 242, 242, 0.04);
-    outline: 1px solid rgba(242, 242, 242, 0.06);
-    box-shadow: 0 20px 60px rgba(13, 13, 13, 0.5);
+    background-color: rgba(255, 255, 255, 0.02);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.5);
     position: relative;
   }
   .glare-card {
@@ -75,11 +75,11 @@ import ProjectsCard from '@/components/ProjectsCard.astro'
   }
 
   .project-card-content {
-    border: 1px solid #3d3d3d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     background-image: radial-gradient(
       circle at 50% 0,
-      rgba(255, 255, 255, 0.1),
-      rgba(13, 13, 13)
+      rgba(255, 255, 255, 0.06),
+      rgba(0, 0, 0, 0.04)
     );
     position: relative;
   }

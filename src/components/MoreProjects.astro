@@ -6,42 +6,36 @@ interface Project {
   description: string
   img: string
   url: string
-}
-
-const bentoItemSpace: Record<string, string> = {
-  first: 'bento-item-secondary',
-  second: 'bento-item-main',
-  third: 'bento-item-secondary',
-  fourth: 'bento-item-vertical',
-  fifth: 'bento-item-vertical',
-  sixth: 'bento-item-secondary'
+  year: string
 }
 ---
 
 <article
   class='px-6 flex flex-col gap-12 sm:px-12 xl:gap-20 xl:px-36 xl:pb-36 2xl:px-56 2xl:pb-56'
 >
-  <div class='w-full h-[2px] bg-neutral-800'></div>
+  <div class='w-full h-[1px] bg-neutral-800'></div>
   <section class='w-full bento-grid'>
     {
       moreWorks.map((project: Project, i: number) => (
-        <picture
-          class={`${bentoItemSpace[Object.keys(bentoItemSpace)[i]]} relative flex`}
-        >
-          <div class='bento-project-card w-full h-full overflow-hidden rounded-lg md:rounded-xl'>
+        <picture class='flex relative rounded-lg p-[6px] lg:rounded-xl lg:p-3 2xl:rounded-3xl 2xl:p-4'>
+          <div class='bento-project-card w-full h-full overflow-hidden rounded-[2px] lg:rounded-md 2xl:rounded-lg'>
             <a
               href={project.url}
               target='_blank'
               class='relative w-full h-full'
             >
               <img
-                class='w-full h-full object-cover grayscale brightness-[0.4] hover:grayscale-0 hover:brightness-100'
+                class='w-full h-full object-cover grayscale brightness-[0.4] opacity-50 hover:grayscale-0 hover:brightness-100 hover:opacity-100'
                 src={project.img}
                 alt={project.title}
               />
-              <p class='absolute bottom-4 left-4 w-full text-xs text-white text-left font-medium lg:text-lg lg:bottom-5 lg:left-5 2xl:text-3xl 2xl:bottom-8 2xl:left-9'>
-                {project.title}
+              <p class='absolute flex flex-col bottom-3 left-4 text-xs text-white font-semibold lg:text-xl 2xl:bottom-6 2xl:left-8 2xl:text-3xl'>
+                <span>{project.title}</span>
+                <span class='italic font-normal'>{project.description}</span>
               </p>
+              <span class='absolute text-xs text-white font-semibold top-3 right-4 lg:text-lg 2xl:top-6 2xl:right-8 2xl:text-2xl'>
+                {project.year}
+              </span>
             </a>
           </div>
         </picture>
@@ -54,69 +48,35 @@ const bentoItemSpace: Record<string, string> = {
   .bento-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, minmax(auto, 148px));
+    grid-template-rows: repeat(3, minmax(240px, auto));
     gap: 1.2rem;
   }
-  .bento-item-main {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .bento-item-vertical {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .bento-item-secondary {
-    grid-column: span 1;
-    grid-row: span 1;
+
+  .bento-grid picture,
+  .bento-project-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.4);
   }
 
-  .bento-project-card {
-    outline-offset: -1px;
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(255, 255, 255, 0.1),
-      rgba(13, 13, 13)
-    );
-    outline: 1px solid rgba(242, 242, 242, 0.06);
-    box-shadow: 0 20px 25px rgba(13, 13, 13, 0.5);
-  }
-  .bento-project-card:hover {
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(255, 255, 255, 0.15),
-      rgba(13, 13, 13)
-    );
-  }
   .bento-project-card a img {
     transition: all 0.2s ease-in-out;
   }
   .bento-project-card:hover a img {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 
   @media (width >= 1080px) {
     .bento-grid {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, minmax(auto, 200px));
+      grid-template-rows: repeat(2, minmax(520px, auto));
       gap: 2rem;
-    }
-    .bento-item-main {
-      grid-column: span 1;
-      grid-row: span 2;
-    }
-    .bento-item-vertical {
-      grid-column: span 1;
-      grid-row: span 2;
-    }
-    .bento-item-secondary {
-      grid-column: span 1;
-      grid-row: span 1;
     }
   }
 
   @media (width >= 1560px) {
     .bento-grid {
-      grid-template-rows: repeat(3, minmax(244px, auto));
+      grid-template-rows: repeat(2, minmax(720px, auto));
     }
   }
 </style>
