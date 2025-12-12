@@ -15,76 +15,49 @@ const project: ProjectType = mainProject
 ---
 
 <article
-  class='project-card p-2 flex flex-col overflow-hidden rounded-[32px] xl:p-3 xl:rounded-[36px]'
+  class='box-border relative p-2 flex flex-col overflow-hidden rounded-[32px] xl:p-3 xl:rounded-[36px]'
 >
-  <div class='glare-card'></div>
-  <div
-    class='project-card-content p-8 py-10 w-full flex flex-col items-center justify-center gap-6 rounded-[24px] xl:p-14 2xl:p-20'
+  <div class='glare'></div>
+  <section
+    class='box-border relative p-8 py-10 w-full flex gap-6 flex-col items-center justify-center rounded-[24px] lg:flex-row lg:gap-0 lg:px-12 lg:py-20 2xl:px-20 2xl:py-28'
   >
-    <div class='glare-content'></div>
+    <div class='glare'></div>
     <header
-      class='w-full flex flex-col items-center justify-center gap-6 sm:flex-row sm:justify-between xl:gap-2'
+      class='w-full text-white flex flex-col gap-6 sm:w-1/2 sm:justify-center lg:gap-16'
     >
-      <section
-        class='w-full text-white flex flex-col gap-6 sm:w-1/2 sm:justify-center lg:gap-6 2xl:gap-8'
+      <div class='gap-2'>
+        <h3
+          class='mb-4 font-semibold text-2xl relative lg:mb-5 lg:text-4xl 2xl:mb-8 2xl:text-7xl'
+        >
+          {project.title.toUpperCase()}
+        </h3>
+        <p
+          class='font-normal text-xs italic text-neutral-300 lg:text-lg lg:pr-16 2xl:text-2xl'
+        >
+          {project.description}
+        </p>
+      </div>
+      <ul
+        class='font-bold text-[10px] flex flex-wrap gap-3 lg:text-lg lg:gap-4 2xl:gap-6 2xl:text-xl'
       >
-        <header>
-          <h3
-            class='mb-4 font-bold text-2xl relative lg:mb-5 lg:text-3xl 2xl:mb-7 2xl:text-7xl'
-          >
-            {project.title.toUpperCase()}
-          </h3>
-          <p
-            class='max-w-[280px] font-normal text-xs text-neutral-400 lg:max-w-[440px] lg:text-lg 2xl:max-w-[620px] 2xl:text-2xl'
-          >
-            {project.description}
-          </p>
-        </header>
-        <a
-          href={project.url}
-          target='_blank'
-          class='icon-work max-w-max text-[#a3a3a3] hover:text-white font-medium text-xs flex items-center justify-start gap-3 transition lg:text-xl lg:gap-4 2xl:text-2xl'
-        >
-          <p>OPEN PROJECT</p>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width={2}
-            stroke='currentColor'
-            class='w-4 h-4 2xl:w-8 2xl:h-8'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'></path>
-          </svg>
-        </a>
-        <ul
-          class='font-bold text-[10px] flex flex-wrap gap-x-3 gap-y-1 lg:text-lg lg:gap-x-6 lg:gap-y-2 2xl:text-xl'
-        >
-          {
-            project.technologies.map((tech, index) => (
-              <li class='tooltip flex items-center justify-center gap-x-2'>
+        {
+          project.technologies.map((tech) => (
+            <li class='tooltip flex items-center justify-center'>
+              <div class='flex items-center justify-center rounded-md box-border p-2 2xl:p-4 2xl:rounded-lg'>
                 <Technologies icon={tech as TechnologieType} client:load />
-                <span class='tooltiptext'>{tech}</span>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
+              </div>
+              <span class='tooltiptext'>{tech}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </header>
+    <a class='w-full h-full sm:w-1/2' href={project.url} target='_blank'>
       <img
-        class='w-full h-auto max-w-[960px] aspect-video drop-shadow-2xl rounded-lg sm:w-1/2 sm:justify-end xl:rounded-xl 2xl:rounded-3xl'
+        class='w-full h-auto max-w-[960px] aspect-video drop-shadow-xl'
         src={project.img}
         alt={project.title}
       />
-    </header>
-    <footer class='w-full flex justify-center sm:justify-start'>
-      <span
-        class='text-transparent titleEffect font-extrabold text-5xl lg:text-9xl 2xl:text-[172px]'
-      >
-        01
-      </span>
-    </footer>
-  </div>
+    </a>
+  </section>
 </article>

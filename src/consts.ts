@@ -1,9 +1,9 @@
 const mainProject = {
   title: 'ChatVerse',
   description:
-    'Real-time chat web application developed in Next.js for seamless communication.',
-  technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress','pusher'],
-  img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/chatverse_bsirpv',
+    'A real-time chat platform built with Next.js, delivering fast, reliable and seamless communication through a modern and responsive interface.',
+  technologies: ['nextjs','typescript','mongodb','prisma','tailwind','cypress'],
+  img: 'https://res.cloudinary.com/dhpxqwsym/image/upload/c_fill,h_540,q_100,w_960/v1677061650/works/chatverse_gtdtzo',
   url: 'https://chat-verse-azure.vercel.app/'
 }
 

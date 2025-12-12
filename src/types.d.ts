@@ -1,1 +1,1 @@
-export type TechnologieType = 'nextjs' | 'reactjs' | 'typescript' | 'tailwind' | 'nodejs' | 'mongodb' | 'cypress' | 'prisma' | 'algolia' | 'pusher' | 'stripe' | 'sentry' | 'express' | 'mongoose' | 'testinglibrary'
+export type TechnologieType = 'nextjs' | 'typescript' | 'mongodb' | 'prisma' | 'tailwind' | 'cypress'

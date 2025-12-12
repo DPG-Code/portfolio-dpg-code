@@ -29,13 +29,14 @@ import ProjectsCard from '@/components/ProjectsCard.astro'
     position: relative;
   }
   .tooltip .tooltiptext {
-    margin-top: -62px;
+    margin-top: -76px;
     visibility: hidden;
     padding: 4px 12px;
     background-color: #0d0d0d;
     color: #ffffff;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
+    font-style: italic;
     border-radius: 6px;
     position: absolute;
     z-index: 1;
@@ -49,49 +50,15 @@ import ProjectsCard from '@/components/ProjectsCard.astro'
     -webkit-text-stroke-color: #ffffff1c;
   }
 
-  .project-card {
-    outline-offset: -1px;
-    background-color: rgba(255, 255, 255, 0.02);
-    outline: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.5);
-    position: relative;
-  }
-  .glare-card {
+  .glare {
     z-index: 1;
     height: 1px;
     background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0) 5%,
-      rgba(255, 255, 255, 0.6) 35%,
-      rgba(255, 255, 255) 50%,
-      rgba(255, 255, 255, 0.6) 65%,
-      rgba(0, 0, 0, 0) 95%
-    );
-    position: absolute;
-    top: 0%;
-    bottom: auto;
-    left: 0%;
-    right: 0%;
-  }
-
-  .project-card-content {
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(255, 255, 255, 0.06),
-      rgba(0, 0, 0, 0.04)
-    );
-    position: relative;
-  }
-  .glare-content {
-    z-index: 1;
-    height: 1px;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0) 5%,
-      rgba(255, 255, 255, 0.4) 35%,
-      rgba(255, 255, 255, 0.6) 50%,
-      rgba(255, 255, 255, 0.4) 65%,
+      rgba(255, 255, 255, 0.3) 35%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.3) 65%,
       rgba(0, 0, 0, 0) 95%
     );
     position: absolute;
@@ -120,6 +87,11 @@ import ProjectsCard from '@/components/ProjectsCard.astro'
     .dot-title {
       width: 14px;
       height: 14px;
+    }
+  }
+  @media (width >= 1536px) {
+    .tooltip .tooltiptext {
+      margin-top: -136px;
     }
   }
 </style>
